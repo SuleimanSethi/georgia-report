@@ -1,0 +1,3507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Georgia Collection — Campaign Performance — Brawn & Fox</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0b0b0c" />
+<meta name="color-scheme" content="dark" />
+<meta name="description" content="Brawn & Fox — Georgia Collection campaign performance. A fifteen-day integrated flight across Meta and Klaviyo." />
+<meta property="og:title" content="Georgia Collection — Campaign Performance" />
+<meta property="og:description" content="A fifteen-day integrated flight across Meta and Klaviyo. Mar 24 – Apr 13, 2026." />
+<meta property="og:type" content="article" />
+<link rel="icon" type="image/svg+xml" href="assets/brawn-fox-logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0b0b0c;
+    --bg-1: #0f0f10;
+    --bg-2: #141416;
+    --bg-3: #1a1a1d;
+    --line: rgba(255,255,255,0.08);
+    --line-2: rgba(255,255,255,0.14);
+    --line-soft: rgba(255,255,255,0.04);
+    --ink: #eeeae2;
+    --ink-2: #c9c3b7;
+    --ink-3: #8a857b;
+    --ink-4: #57534b;
+    --ink-5: #2e2c28;
+    /* brass/amber single accent — warm, non-blue */
+    --accent: oklch(0.78 0.11 75);     /* warm brass */
+    --accent-2: oklch(0.86 0.09 85);   /* pale gold */
+    --accent-dim: oklch(0.55 0.08 70);
+    --accent-glow: oklch(0.78 0.11 75 / 0.35);
+    --sage: oklch(0.72 0.04 130);      /* secondary, muted sage — non-blue */
+    --serif: 'Fraunces', 'Times New Roman', serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --sans: 'Inter', -apple-system, system-ui, sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+  body{
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(255,200,120,0.06), transparent 60%),
+      radial-gradient(900px 500px at 0% 40%, rgba(255,180,90,0.03), transparent 60%),
+      linear-gradient(180deg, #0a0a0b 0%, #0b0b0c 100%);
+    min-height:100vh;
+  }
+
+  /* faint grid */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:
+      linear-gradient(var(--line-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 80%);
+  }
+
+  .page{max-width:1440px;margin:0 auto;padding:0 56px 120px;position:relative;z-index:1}
+
+  /* ——— TOP BAR ——— */
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:28px 0 20px;border-bottom:1px solid var(--line);
+    position:sticky;top:0;background:rgba(11,11,12,0.85);backdrop-filter:blur(12px);z-index:50;
+  }
+  .topbar .logo{height:22px;display:block}
+  .topbar .logo svg{height:22px;width:auto;display:block}
+  .topbar .meta{display:flex;gap:28px;align-items:center;font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:0.06em;text-transform:uppercase}
+  .topbar .meta .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent-glow);margin-right:8px;vertical-align:middle}
+  .topbar .crumb{color:var(--ink-2)}
+  .topbar .sep{width:1px;height:14px;background:var(--line-2)}
+
+  /* ——— HERO ——— */
+  .hero{padding:80px 0 56px;border-bottom:1px solid var(--line);position:relative}
+  .hero .eyebrow{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);
+    display:flex;gap:16px;align-items:center;margin-bottom:28px;
+  }
+  .hero .eyebrow .bar{width:40px;height:1px;background:var(--accent)}
+  .hero h1{
+    font-family:var(--serif);font-weight:300;font-size:128px;line-height:0.92;letter-spacing:-0.03em;
+    margin:0 0 8px;color:var(--ink);
+  }
+  .hero h1 em{font-style:italic;font-weight:400;color:var(--accent-2)}
+  .hero .sub{
+    font-family:var(--serif);font-size:26px;font-weight:300;color:var(--ink-2);margin:0 0 48px;letter-spacing:-0.01em;
+  }
+  .hero-grid{display:grid;grid-template-columns: 1.3fr 1fr 1fr 1fr;gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .hero-grid > div{background:var(--bg);padding:22px 24px}
+  .hero-grid .k{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+  .hero-grid .v{font-family:var(--mono);font-size:15px;color:var(--ink);letter-spacing:0.02em}
+  .hero-grid .v .dim{color:var(--ink-3)}
+
+  /* section header */
+  .sec-head{
+    display:flex;justify-content:space-between;align-items:flex-end;padding:80px 0 28px;
+  }
+  .sec-head .id{font-family:var(--mono);font-size:10px;letter-spacing:0.25em;color:var(--ink-3);text-transform:uppercase}
+  .sec-head h2{font-family:var(--serif);font-weight:300;font-size:44px;line-height:1;letter-spacing:-0.02em;margin:8px 0 0;color:var(--ink)}
+  .sec-head .note{font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:0.1em;text-transform:uppercase;max-width:360px;text-align:right}
+  .sec-sub{font-family:var(--serif);font-size:20px;font-weight:300;font-style:italic;color:var(--ink-2);max-width:560px;margin:14px 0 0;letter-spacing:-0.005em}
+
+  /* ——— HEADLINE METRICS ——— */
+  .trophies{
+    display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);
+    border:1px solid var(--line);
+  }
+  .trophy{background:var(--bg-1);padding:32px 26px 28px;position:relative;min-height:220px;display:flex;flex-direction:column;justify-content:space-between}
+  .trophy .label{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-3);margin-bottom:24px}
+  .trophy .num{font-family:var(--serif);font-weight:300;font-size:56px;line-height:1;letter-spacing:-0.03em;color:var(--ink)}
+  .trophy .num .pre{color:var(--ink-3);font-size:28px;vertical-align:top;margin-right:2px;letter-spacing:0}
+  .trophy .num .suf{color:var(--accent-2);font-size:24px;margin-left:4px}
+  .trophy .sub{font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:0.06em;margin-top:14px}
+  .trophy.accent .num{color:var(--accent-2)}
+  .trophy.accent::after{content:"";position:absolute;inset:0;border:1px solid var(--accent);pointer-events:none;opacity:0.5}
+  .trophy .tick{position:absolute;top:14px;right:14px;font-family:var(--mono);font-size:10px;color:var(--ink-4);letter-spacing:0.1em}
+
+  /* ——— TIMELINE ——— */
+  .timeline-card{border:1px solid var(--line);background:var(--bg-1);padding:48px 48px 40px;position:relative}
+  .timeline{position:relative;padding:40px 0 20px;margin-top:8px}
+  .timeline-axis{position:relative;height:1px;background:var(--line-2);margin-top:110px}
+  .tl-ticks{display:flex;justify-content:space-between;position:relative;top:-110px;height:0}
+  .tl-node{position:absolute;transform:translateX(-50%);width:200px;text-align:center}
+  .tl-node .dot{width:11px;height:11px;border-radius:50%;background:var(--accent);margin:102px auto 0;position:relative;box-shadow:0 0 0 4px rgba(0,0,0,0.9), 0 0 18px var(--accent-glow)}
+  .tl-node.past .dot{background:var(--ink);box-shadow:0 0 0 4px rgba(0,0,0,0.9)}
+  .tl-node .date{font-family:var(--mono);font-size:10px;letter-spacing:0.18em;color:var(--accent);text-transform:uppercase;margin-bottom:6px}
+  .tl-node .past .date{color:var(--ink-3)}
+  .tl-node .title{font-family:var(--serif);font-size:17px;color:var(--ink);font-weight:400;line-height:1.25}
+  .tl-node .desc{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.05em;margin-top:6px;line-height:1.5}
+  .tl-node .stem{position:absolute;left:50%;top:96px;width:1px;height:16px;background:var(--line-2);transform:translateX(-0.5px)}
+
+  /* Timeline v2 — canvas-driven */
+  .tl-evt{position:absolute;transform:translateX(-50%);width:160px;text-align:center;top:10px;pointer-events:auto;transition:transform .4s cubic-bezier(.2,.7,.2,1);z-index:4}
+  .tl-evt .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:10px;padding:3px 8px;border:1px solid rgba(212,175,110,.35);background:rgba(0,0,0,.6);backdrop-filter:blur(4px)}
+  .tl-evt .ttl{font-family:var(--serif);font-size:17px;color:var(--ink);font-weight:400;line-height:1.15;letter-spacing:-0.01em;white-space:nowrap}
+  .tl-evt .sub{font-family:var(--mono);font-size:10px;color:var(--ink-2);letter-spacing:0.05em;margin-top:6px;line-height:1.4;white-space:nowrap}
+  .tl-evt::after{content:"";position:absolute;left:50%;top:100px;width:1px;height:62px;background:linear-gradient(to bottom, rgba(212,175,110,.5), rgba(212,175,110,.08));transform:translateX(-0.5px);pointer-events:none}
+  .tl-evt .glyph{width:9px;height:9px;background:var(--accent);border-radius:50%;position:absolute;left:50%;top:164px;margin-left:-4.5px;box-shadow:0 0 0 3px var(--bg-0), 0 0 14px var(--accent-glow);transition:transform .3s;z-index:5}
+  .tl-evt[data-color="accent-bright"] .glyph{background:var(--accent-2);box-shadow:0 0 0 3px var(--bg-0), 0 0 18px var(--accent-2)}
+  /* Staggered card (Apr 06 budget) — drops down; hide stem/glyph so it doesn't collide with curve */
+  .tl-evt[data-day="13"]{top:96px !important}
+  .tl-evt[data-day="13"]::after{display:none}
+  .tl-evt[data-day="13"] .glyph{display:none}
+  .tl-evt.fired .glyph{animation:evtPulse 1.2s cubic-bezier(.2,.7,.2,1)}
+  .tl-evt.fired{transform:translateX(-50%) translateY(-3px)}
+  @keyframes evtPulse{
+    0%{box-shadow:0 0 0 3px var(--bg-0), 0 0 0 0 var(--accent-glow), 0 0 14px var(--accent-glow)}
+    40%{box-shadow:0 0 0 3px var(--bg-0), 0 0 0 16px rgba(0,0,0,0), 0 0 30px var(--accent-2)}
+    100%{box-shadow:0 0 0 3px var(--bg-0), 0 0 0 28px rgba(0,0,0,0), 0 0 14px var(--accent-glow)}
+  }
+
+  .tl-hash{position:absolute;top:0;width:1px;height:6px;background:var(--line-2);transform:translateX(-0.5px)}
+  .tl-hash.major{height:10px;background:var(--line);top:-2px}
+  .tl-hash .lbl{position:absolute;top:12px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:9px;color:var(--ink-3);letter-spacing:0.1em;white-space:nowrap}
+  .tl-hash.major .lbl{color:var(--ink-2);font-size:10px;letter-spacing:0.14em}
+
+  .tl-phase{position:absolute;top:0;height:20px;border-left:1px solid var(--line);padding:4px 0 0 8px;color:var(--ink-4);transition:color .4s, background .4s;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:clip}
+  .tl-phase.active{color:var(--accent);background:linear-gradient(180deg, rgba(212,175,110,0.08), rgba(0,0,0,0))}
+  .tl-phase:last-child{border-right:1px solid var(--line)}
+
+  .tl-playhead{position:absolute;top:0;bottom:30px;width:1px;background:linear-gradient(180deg, rgba(212,175,110,0) 0%, rgba(212,175,110,0.6) 20%, rgba(212,175,110,0.9) 60%, rgba(212,175,110,0) 100%);pointer-events:none;z-index:3;transform:translateX(-0.5px)}
+  .tl-playhead::before{content:"";position:absolute;left:-3px;top:50%;width:7px;height:7px;background:var(--accent-2);border-radius:50%;transform:translateY(-50%);box-shadow:0 0 12px var(--accent-glow), 0 0 24px var(--accent-glow)}
+
+  .tl-readout{position:absolute;top:-4px;right:0;display:flex;gap:32px;align-items:baseline;pointer-events:none;z-index:4}
+  .tl-readout .block{display:flex;flex-direction:column;align-items:flex-end}
+  .tl-readout .k{font-family:var(--mono);font-size:9px;letter-spacing:0.2em;color:var(--ink-4);text-transform:uppercase}
+  .tl-readout .v{font-family:var(--serif);font-size:22px;color:var(--accent-2);font-weight:300;letter-spacing:-0.01em}
+  .tl-readout .v.sm{font-size:13px;font-family:var(--mono);letter-spacing:0.12em;color:var(--accent)}
+  .tl-readout .day{font-family:var(--serif);font-size:42px;color:var(--ink);font-weight:300;letter-spacing:-0.02em;position:absolute;top:14px;left:0}
+  .tl-readout .daylbl{position:absolute;top:-4px;left:0;font-family:var(--mono);font-size:9px;letter-spacing:0.24em;color:var(--accent);text-transform:uppercase}
+
+  /* week comparison rail */
+  .weeks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px}
+  .week{background:var(--bg-1);padding:24px 28px 28px}
+  .week .h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
+  .week .h .ph{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-3)}
+  .week .h .range{font-family:var(--mono);font-size:10px;color:var(--ink-4)}
+  .week .stat{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line);font-family:var(--mono);font-size:12px}
+  .week .stat:last-child{border-bottom:0}
+  .week .stat .k{color:var(--ink-3);letter-spacing:0.08em}
+  .week .stat .v{color:var(--ink)}
+  .week .roas{font-family:var(--serif);font-size:44px;font-weight:300;color:var(--accent-2);letter-spacing:-0.02em;margin-top:12px;line-height:1}
+  .week .roas .u{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-left:8px;letter-spacing:0.1em;text-transform:uppercase}
+  .week .bar{height:3px;background:var(--bg-3);margin-top:14px;position:relative;overflow:hidden}
+  .week .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);box-shadow:0 0 10px var(--accent-glow)}
+
+  /* ——— TWO-COL SECTIONS ——— */
+  .grid-2{display:grid;grid-template-columns: 1.15fr 1fr;gap:24px}
+  .panel{border:1px solid var(--line);background:var(--bg-1);padding:32px}
+  .panel .h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .panel .h .t{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);letter-spacing:-0.01em}
+  .panel .h .n{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.18em;text-transform:uppercase}
+
+  /* Creative performance rows */
+  .creative-row{display:grid;grid-template-columns: 1.1fr repeat(4, 1fr);gap:18px;padding:20px 0;border-bottom:1px solid var(--line);align-items:center}
+  .creative-row:last-child{border-bottom:0}
+  .creative-row .name{display:flex;align-items:center;gap:14px}
+  .creative-row .name .tag{font-family:var(--mono);font-size:10px;color:var(--ink-4);letter-spacing:0.1em}
+  .creative-row .name .tl{font-family:var(--serif);font-size:19px;font-weight:400;color:var(--ink)}
+  .creative-row .name .tl em{color:var(--accent-2);font-style:normal}
+  .creative-row .cell{font-family:var(--mono);font-size:13px;color:var(--ink-2)}
+  .creative-row .cell .k{font-size:9px;color:var(--ink-4);letter-spacing:0.15em;text-transform:uppercase;display:block;margin-bottom:6px}
+  .creative-row .cell.winner{color:var(--accent-2)}
+  .creative-row .mini-bar{height:2px;background:var(--bg-3);margin-top:6px;width:100%;position:relative}
+  .creative-row .mini-bar i{position:absolute;left:0;top:0;bottom:0;background:var(--accent)}
+  .winner-badge{font-family:var(--mono);font-size:9px;letter-spacing:0.2em;color:var(--accent);border:1px solid var(--accent);padding:3px 8px;text-transform:uppercase}
+
+  /* FB vs IG split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:0}
+  .split > div{background:var(--bg-1);padding:26px}
+  .split .role{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:6px}
+  .split .ch{font-family:var(--serif);font-size:28px;font-weight:300;color:var(--ink);margin-bottom:18px;letter-spacing:-0.01em}
+  .split .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line);font-family:var(--mono);font-size:12px}
+  .split .row .k{color:var(--ink-3);letter-spacing:0.08em}
+  .split .row .v{color:var(--ink)}
+  .split .pct{height:32px;background:var(--bg-3);margin-top:22px;position:relative;overflow:hidden;border:1px solid var(--line)}
+  .split .pct i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);opacity:0.85}
+  .split .pct span{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:11px;color:var(--ink);letter-spacing:0.1em}
+
+  /* reach tiles */
+  .reach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:24px}
+  .reach-grid > div{background:var(--bg-1);padding:22px}
+  .reach-grid .k{font-family:var(--mono);font-size:10px;letter-spacing:0.18em;color:var(--ink-3);text-transform:uppercase}
+  .reach-grid .v{font-family:var(--serif);font-size:34px;font-weight:300;color:var(--ink);margin-top:10px;letter-spacing:-0.02em}
+
+  /* ——— EMAIL ——— */
+  .email-hero{border:1px solid var(--accent);background:linear-gradient(180deg, rgba(190,140,60,0.08), rgba(190,140,60,0.02));padding:40px 44px;position:relative;overflow:hidden}
+  .email-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 200px at 90% 100%, var(--accent-glow), transparent 60%);opacity:0.3;pointer-events:none}
+  .email-hero .big{font-family:var(--serif);font-size:140px;line-height:0.9;font-weight:300;color:var(--accent-2);letter-spacing:-0.04em}
+  .email-hero .big .pct{font-size:72px;vertical-align:top;color:var(--accent)}
+  .email-hero .lbl{font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:12px}
+  .email-hero .cap{font-family:var(--serif);font-size:20px;font-style:italic;font-weight:300;color:var(--ink-2);margin-top:10px;max-width:420px}
+
+  .bench{display:flex;align-items:center;gap:18px;margin-top:28px}
+  .bench .track{flex:1;height:24px;position:relative;background:var(--bg-3);border:1px solid var(--line)}
+  .bench .track .industry{position:absolute;left:0;top:0;bottom:0;background:var(--ink-5)}
+  .bench .track .us{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%)}
+  .bench .track .marker{position:absolute;top:-6px;bottom:-6px;width:1px;background:var(--ink-3)}
+  .bench .track .marker .lab{position:absolute;top:-22px;font-family:var(--mono);font-size:9px;color:var(--ink-3);letter-spacing:0.15em;text-transform:uppercase;white-space:nowrap;transform:translateX(-50%)}
+  .bench .val{font-family:var(--mono);font-size:11px;color:var(--ink);min-width:70px;text-align:right;letter-spacing:0.1em}
+
+  .email-rows{margin-top:28px;border:1px solid var(--line)}
+  .er-head,.er-row{display:grid;grid-template-columns: 2.2fr 1fr 1fr 1fr 1fr 1fr 1.1fr;gap:16px;padding:14px 22px;font-family:var(--mono);font-size:12px;align-items:center}
+  .er-head{background:var(--bg-2);color:var(--ink-3);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;border-bottom:1px solid var(--line)}
+  .er-row{border-bottom:1px solid var(--line);color:var(--ink)}
+  .er-row:last-child{border-bottom:0;background:var(--bg-2)}
+  .er-row .name{font-family:var(--serif);font-size:16px;color:var(--ink)}
+  .er-row .open{color:var(--accent-2)}
+
+  /* ——— PRODUCTS · Leaderboard ——— */
+  .prod-wrap{border:1px solid var(--line);background:var(--bg-1);position:relative;overflow:hidden}
+  .prod-head{display:grid;grid-template-columns: 1fr auto auto;gap:32px;align-items:end;padding:26px 32px 22px;border-bottom:1px solid var(--line)}
+  .prod-head .ph-title{font-family:var(--mono);font-size:10px;letter-spacing:0.28em;color:var(--ink-3);text-transform:uppercase}
+  .prod-head .ph-sub{font-family:var(--serif);font-size:22px;color:var(--ink);font-weight:300;letter-spacing:-0.01em;margin-top:6px}
+  .prod-head .ph-stat{text-align:right;font-family:var(--mono);font-size:10px;letter-spacing:0.18em;color:var(--ink-3);text-transform:uppercase}
+  .prod-head .ph-stat b{display:block;font-family:var(--serif);font-size:28px;font-weight:300;color:var(--ink);letter-spacing:-0.02em;margin-top:4px;letter-spacing:-0.01em}
+  .prod-head .ph-stat.hero b{color:var(--accent-2)}
+
+  .prod-leader{display:grid;grid-template-columns: 56px 1.4fr 90px 110px 2.2fr;gap:20px;align-items:center;padding:10px 32px;border-bottom:1px dashed var(--line);font-family:var(--mono);font-size:9px;letter-spacing:0.22em;color:var(--ink-4);text-transform:uppercase}
+
+  .prod-row{display:grid;grid-template-columns: 56px 1.4fr 90px 110px 2.2fr;gap:20px;align-items:center;padding:18px 32px;border-bottom:1px solid var(--line);position:relative}
+  .prod-row:last-child{border-bottom:0}
+  .prod-row .rk{font-family:var(--mono);font-size:12px;color:var(--ink-4);letter-spacing:0.15em}
+  .prod-row .nm{font-family:var(--serif);font-size:21px;color:var(--ink);font-weight:300;letter-spacing:-0.01em}
+  .prod-row .sku{font-family:var(--mono);font-size:10px;color:var(--ink-4);letter-spacing:0.18em;margin-top:4px;text-transform:uppercase}
+  .prod-row .un{font-family:var(--serif);font-size:26px;color:var(--ink);font-weight:300;letter-spacing:-0.02em;text-align:right}
+  .prod-row .un .u{font-family:var(--mono);font-size:10px;color:var(--ink-4);letter-spacing:0.2em;margin-left:4px;text-transform:uppercase}
+  .prod-row .pct{font-family:var(--mono);font-size:14px;color:var(--ink-2);letter-spacing:0.08em;text-align:right;font-weight:500}
+  .prod-row .pct.hero{color:var(--accent-2);font-size:17px}
+  .prod-row .bar-cell{position:relative;height:26px;display:flex;align-items:center}
+  .prod-row .bar-cell .track{position:absolute;left:0;right:0;top:50%;height:2px;background:var(--bg-3);transform:translateY(-50%)}
+  .prod-row .bar-cell .fill{position:absolute;left:0;top:50%;height:10px;transform:translateY(-50%);background:linear-gradient(90deg, oklch(0.62 0.06 75) 0%, oklch(0.84 0.09 80) 100%);width:0;transition:width 1.4s cubic-bezier(.3,.8,.2,1)}
+  .prod-row .bar-cell .fill::after{content:"";position:absolute;right:0;top:-3px;bottom:-3px;width:2px;background:oklch(0.98 0.06 90);box-shadow:0 0 8px var(--accent-glow)}
+  .prod-row.hero{background:linear-gradient(90deg, rgba(212,175,110,0.06), rgba(212,175,110,0.01) 60%, transparent);border-bottom:1px solid rgba(212,175,110,0.25)}
+  .prod-row.hero .nm{font-size:30px;color:var(--accent-2);letter-spacing:-0.02em}
+  .prod-row.hero .nm em{font-style:italic}
+  .prod-row.hero .un{font-size:36px;color:var(--ink)}
+  .prod-row.hero .bar-cell{height:38px}
+  .prod-row.hero .bar-cell .fill{height:18px;background:linear-gradient(90deg, oklch(0.75 0.10 78) 0%, oklch(0.94 0.10 85) 100%);box-shadow:0 0 20px rgba(212,175,110,0.35)}
+  .prod-row.hero .bar-cell .fill::after{width:3px;box-shadow:0 0 14px var(--accent-2)}
+  .prod-row.hero .rk{color:var(--accent);font-size:14px}
+  .prod-row .delta{position:absolute;left:32px;top:8px;font-family:var(--mono);font-size:9px;letter-spacing:0.2em;color:var(--ink-4);text-transform:uppercase;opacity:0;transition:opacity .6s}
+  .prod-row.hero .delta{color:var(--accent);opacity:0}
+
+  /* Tick marks at 25 / 50 / 75% on the bar column header */
+  .prod-leader .bar-ticks{position:relative}
+  .prod-leader .bar-ticks span{display:inline-block;color:var(--ink-4)}
+  .prod-leader .bar-ticks::before,.prod-leader .bar-ticks::after{content:"";position:absolute;top:-8px;bottom:-6px;width:1px;background:var(--line-soft)}
+  .prod-leader .bar-ticks::before{left:25%}
+  .prod-leader .bar-ticks::after{left:50%}
+
+  /* Flying flake on hero row — subtle motion */
+  @keyframes prFlake{0%,100%{opacity:.0}50%{opacity:.7}}
+  .prod-row.hero::after{content:"";position:absolute;right:32px;top:50%;width:4px;height:4px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 12px var(--accent-glow);transform:translateY(-50%);animation:prFlake 2.4s ease-in-out infinite}
+
+  /* ——— PRODUCTS — aggressive entrance animation ——— */
+  .prod-row{opacity:0;transform:translateX(-14px)}
+  .prod-wrap.go .prod-row{animation:prRowIn .7s cubic-bezier(.2,.7,.2,1) both}
+  .prod-wrap.go .prod-row:nth-child(3){animation-delay:.05s}
+  .prod-wrap.go .prod-row:nth-child(4){animation-delay:.30s}
+  .prod-wrap.go .prod-row:nth-child(5){animation-delay:.40s}
+  .prod-wrap.go .prod-row:nth-child(6){animation-delay:.48s}
+  .prod-wrap.go .prod-row:nth-child(7){animation-delay:.54s}
+  .prod-wrap.go .prod-row:nth-child(8){animation-delay:.60s}
+  .prod-wrap.go .prod-row:nth-child(9){animation-delay:.66s}
+  .prod-wrap.go .prod-row:nth-child(10){animation-delay:.72s}
+  .prod-wrap.go .prod-row:nth-child(11){animation-delay:.78s}
+  @keyframes prRowIn{
+    0%{opacity:0;transform:translateX(-14px);filter:blur(3px)}
+    60%{opacity:1;filter:blur(0)}
+    100%{opacity:1;transform:translateX(0);filter:blur(0)}
+  }
+
+  /* Bar fill now includes shimmer sweep */
+  .prod-row .bar-cell .fill{overflow:hidden}
+  .prod-row .bar-cell .fill .shimmer{
+    position:absolute;inset:0;
+    background:linear-gradient(90deg, transparent 0%, rgba(255,244,220,0.55) 50%, transparent 100%);
+    transform:translateX(-100%);
+  }
+  .prod-wrap.go .prod-row .bar-cell .fill .shimmer{animation:prShim 1.6s cubic-bezier(.4,.2,.2,1) .9s forwards}
+  .prod-wrap.go .prod-row:nth-child(n+3) .bar-cell .fill .shimmer{animation-delay:1.2s}
+  @keyframes prShim{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+  /* Hero row — flash + pulse on reveal */
+  .prod-wrap.go .prod-row.hero{animation:prRowIn .7s cubic-bezier(.2,.7,.2,1) both, prHeroFlash 1.8s ease-out .8s 1}
+  @keyframes prHeroFlash{
+    0%{box-shadow:inset 0 0 0 0 rgba(212,175,110,0)}
+    15%{box-shadow:inset 0 0 80px 0 rgba(212,175,110,0.25)}
+    100%{box-shadow:inset 0 0 0 0 rgba(212,175,110,0)}
+  }
+  .prod-wrap.go .prod-row.hero .bar-cell .fill{animation:prHeroPulse 3s ease-in-out 2s infinite}
+  @keyframes prHeroPulse{
+    0%,100%{box-shadow:0 0 20px rgba(212,175,110,0.35)}
+    50%{box-shadow:0 0 34px rgba(212,175,110,0.7)}
+  }
+
+  /* Counter chip — digits roll, slab highlighted */
+  .prod-row .un, .prod-row .pct{will-change:contents}
+  .prod-wrap.go .prod-row.hero .un,
+  .prod-wrap.go .prod-row.hero .pct{animation:prHeroNum 1.2s ease-out 1.6s both}
+  @keyframes prHeroNum{
+    0%{transform:scale(.85);opacity:.3;filter:blur(2px)}
+    50%{transform:scale(1.18);opacity:1;filter:blur(0)}
+    100%{transform:scale(1);opacity:1;filter:blur(0)}
+  }
+  .prod-row.hero .un{display:inline-block;transform-origin:right center}
+  .prod-row.hero .pct{display:inline-block;transform-origin:right center}
+
+  /* Particle traveling along hero bar */
+  .prod-row.hero .bar-cell .particle{
+    position:absolute;top:50%;left:0;width:5px;height:5px;border-radius:50%;
+    background:oklch(0.98 0.08 90);box-shadow:0 0 16px var(--accent-2), 0 0 30px rgba(212,175,110,0.6);
+    transform:translate(-50%,-50%);opacity:0;pointer-events:none;
+  }
+  .prod-wrap.go .prod-row.hero .bar-cell .particle{animation:prPart 2.4s cubic-bezier(.4,.2,.2,1) 1.4s infinite}
+  @keyframes prPart{
+    0%{left:0;opacity:0}
+    10%{opacity:1}
+    90%{opacity:1}
+    100%{left:100%;opacity:0}
+  }
+
+  /* SCAN sweep across whole leaderboard once on reveal */
+  .prod-wrap::after{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:4;
+    background:linear-gradient(90deg, transparent 0%, transparent 40%, rgba(212,175,110,0.13) 48%, rgba(255,240,210,0.25) 50%, rgba(212,175,110,0.13) 52%, transparent 60%, transparent 100%);
+    transform:translateX(-100%);
+  }
+  .prod-wrap.go::after{animation:prScan 1.8s cubic-bezier(.3,.3,.3,1) .2s 1 forwards}
+  @keyframes prScan{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+  /* Telemetry ticker line above leaderboard */
+  .prod-wrap > .tele{
+    display:flex;gap:24px;align-items:center;
+    padding:10px 32px;border-bottom:1px solid var(--line);background:rgba(212,175,110,0.04);
+    font-family:var(--mono);font-size:9px;letter-spacing:0.26em;color:var(--accent);
+    text-transform:uppercase;overflow:hidden;white-space:nowrap;
+  }
+  .prod-wrap > .tele span{display:inline-block;animation:prTickGhost 2s ease-in-out infinite}
+  .prod-wrap > .tele span:nth-child(2){animation-delay:.4s;color:var(--ink-3)}
+  .prod-wrap > .tele span:nth-child(3){animation-delay:.8s;color:var(--ink-3)}
+  .prod-wrap > .tele span:nth-child(4){animation-delay:1.2s;color:var(--accent-2)}
+  @keyframes prTickGhost{0%,100%{opacity:.45}50%{opacity:1}}
+
+  /* RANK digit ticker on each row — flip-in on mount */
+  .prod-wrap.go .prod-row .rk{animation:prRkBlink .5s steps(6,end) .4s both}
+  @keyframes prRkBlink{
+    0%,33%,66%,100%{opacity:1}
+    16%,50%,83%{opacity:0.2}
+  }
+
+  /* Hero row — traveling trail along left edge */
+  .prod-row.hero .trail{
+    position:absolute;left:0;top:0;bottom:0;width:2px;
+    background:linear-gradient(180deg, transparent 0%, var(--accent-2) 50%, transparent 100%);
+    transform:translateY(-100%);
+  }
+  .prod-wrap.go .prod-row.hero .trail{animation:prTrail 2.2s ease-in-out .9s infinite}
+  @keyframes prTrail{
+    0%{transform:translateY(-100%)}
+    100%{transform:translateY(100%)}
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    .prod-wrap.go .prod-row,
+    .prod-wrap.go .prod-row.hero{animation:none;opacity:1;transform:none}
+    .prod-wrap.go::after,
+    .prod-wrap.go .prod-row .bar-cell .fill .shimmer,
+    .prod-wrap.go .prod-row.hero .bar-cell .fill,
+    .prod-wrap.go .prod-row.hero .bar-cell .particle,
+    .prod-wrap.go .prod-row.hero .trail{animation:none}
+  }
+
+  .prod-foot-note{padding:18px 32px 22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:0.18em;color:var(--ink-3);text-transform:uppercase;background:var(--bg-2)}
+  .prod-foot-note .ft-insight{color:var(--ink-2);font-family:var(--serif);font-size:15px;font-style:italic;text-transform:none;letter-spacing:0;font-weight:300}
+
+  /* MIXED CART row */
+  .mixed{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .mixed > div{background:var(--bg-1);padding:24px}
+  .mixed .t{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.18em;text-transform:uppercase}
+  .mixed .aov{font-family:var(--serif);font-size:44px;font-weight:300;color:var(--ink);line-height:1;margin-top:12px;letter-spacing:-0.02em}
+  .mixed .ord{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:8px;letter-spacing:0.08em}
+  .mixed .winner{position:relative}
+  .mixed .winner .aov{color:var(--accent-2)}
+  .mixed .winner::after{content:"+64%";position:absolute;top:22px;right:24px;font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:0.1em;border:1px solid var(--accent);padding:3px 8px}
+
+  /* ——— GEO (sci-fi orbital console) ——— */
+  .geo-layout{display:block}
+  .geo-viz{border:1px solid var(--line);background:var(--bg-1);padding:0;position:relative;min-height:620px;overflow:hiddenn}
+  .geo-viz::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg, rgba(212,175,110,0.015) 0px, rgba(212,175,110,0.015) 1px, transparent 1px, transparent 3px);pointer-events:none;z-index:1}
+
+  .geo-top{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line);background:rgba(0,0,0,0.3);font-family:var(--mono);font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase}
+  .geo-top .geo-id{display:flex;align-items:center;gap:10px;color:var(--accent)}
+  .geo-top .geo-id .pip{width:6px;height:6px;background:var(--accent);border-radius:50%;box-shadow:0 0 10px var(--accent-glow);animation:geoPip 1.4s ease-in-out infinite}
+  @keyframes geoPip{0%,100%{opacity:1;box-shadow:0 0 10px var(--accent-glow)}50%{opacity:0.4;box-shadow:0 0 3px var(--accent-glow)}}
+  .geo-top .geo-coord{display:flex;align-items:center;gap:12px;color:var(--ink-3)}
+  .geo-top .geo-coord .sep{color:var(--ink-4);opacity:.4}
+  .geo-top .geo-coord .live{color:var(--accent-2);padding:2px 8px;border:1px solid var(--accent-2);box-shadow:0 0 10px rgba(212,175,110,0.3);animation:geoPip 1.8s ease-in-out infinite}
+
+  .geo-title-row{position:relative;z-index:3;padding:24px 32px 14px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+  .geo-title{font-family:var(--serif);font-size:24px;color:var(--ink);font-weight:400;letter-spacing:-0.01em}
+  .geo-sub{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.12em;text-transform:uppercase;margin-top:6px}
+  .geo-legend{display:flex;gap:14px;font-family:var(--mono);font-size:9px;color:var(--ink-3);letter-spacing:0.1em;text-transform:uppercase;align-items:center}
+  .geo-legend .sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+  .geo-legend .sw-hi{background:oklch(0.92 0.09 85);box-shadow:0 0 10px var(--accent-glow)}
+  .geo-legend .sw-md{background:oklch(0.82 0.08 80 / 0.85)}
+  .geo-legend .sw-lo{background:oklch(0.78 0.08 80 / 0.55)}
+
+  .geo-stage{position:relative;margin:0 16px;height:440px;border:1px solid var(--line);background:rgba(0,0,0,0.28);overflow:hidden}
+  .geo-stage canvas{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+  .geo-stage .geo-svg{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}
+
+  .geo-halo{transform-origin:420px 490px;animation:geoHalo 4.5s ease-in-out infinite}
+  @keyframes geoHalo{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}}
+
+  .geo-rings circle{transform-origin:420px 490px;animation:geoRingSpin 28s linear infinite}
+  .geo-rings circle:nth-child(2){animation-duration:36s;animation-direction:reverse}
+  .geo-rings circle:nth-child(3){animation-duration:44s}
+  .geo-rings circle:nth-child(4){animation-duration:58s;animation-direction:reverse}
+  @keyframes geoRingSpin{from{stroke-dashoffset:0}to{stroke-dashoffset:-120}}
+
+  .geo-us{stroke-dasharray:2400;stroke-dashoffset:2400;animation:geoDraw 3.2s cubic-bezier(.2,.7,.2,1) .2s forwards, geoPulse 6s ease-in-out 3.4s infinite}
+  @keyframes geoDraw{to{stroke-dashoffset:0}}
+  @keyframes geoPulse{0%,100%{stroke:oklch(0.86 0.09 85 / 0.35)}50%{stroke:oklch(0.86 0.09 85 / 0.55)}}
+
+  .wire{stroke-dasharray:2 3;animation:wireFlow 3s linear infinite}
+  @keyframes wireFlow{to{stroke-dashoffset:-40}}
+  .wire:nth-child(1){animation-duration:2.2s}
+  .wire:nth-child(2){animation-duration:2.8s}
+  .wire:nth-child(3){animation-duration:3.4s}
+  .wire:nth-child(4){animation-duration:2.6s}
+  .wire:nth-child(5){animation-duration:3.1s}
+  .wire:nth-child(6){animation-duration:3.6s}
+  .wire:nth-child(7){animation-duration:4.2s}
+  .wire:nth-child(8){animation-duration:3.8s}
+  .wire:nth-child(9){animation-duration:4.6s}
+
+  .st.home .pulse-ring{transform-origin:center;animation:stRing 2.2s cubic-bezier(.2,.7,.2,1) infinite}
+  @keyframes stRing{0%{r:8;opacity:1;stroke-width:1.2}100%{r:24;opacity:0;stroke-width:.3}}
+  .st.hi circle{animation:stBlink 2.4s ease-in-out infinite}
+  .st.md circle{animation:stBlink 3.2s ease-in-out infinite}
+  .st.lo circle{animation:stBlink 4s ease-in-out infinite}
+  @keyframes stBlink{0%,100%{opacity:1}50%{opacity:.45}}
+
+  .geo-sweep{position:absolute;inset:0;z-index:2;pointer-events:none;background:conic-gradient(from 0deg at 35% 64.5%, transparent 0deg, transparent 330deg, oklch(0.86 0.09 85 / 0.22) 355deg, oklch(0.86 0.09 85 / 0.35) 359deg, transparent 360deg);mix-blend-mode:screen;animation:geoSweep 5.5s linear infinite;mask-image:radial-gradient(circle at 35% 64.5%, black 0%, black 30%, transparent 55%)}
+  @keyframes geoSweep{to{transform:rotate(360deg)}}
+
+  .geo-scan{position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(180deg, transparent 0%, transparent 48%, rgba(212,175,110,0.18) 49.5%, rgba(244,214,158,0.25) 50%, rgba(212,175,110,0.18) 50.5%, transparent 52%, transparent 100%);background-size:100% 300%;animation:geoScanMove 7s linear infinite;mix-blend-mode:screen;opacity:.7}
+  @keyframes geoScanMove{0%{background-position:0 -100%}100%{background-position:0 200%}}
+
+  .geo-gauges{position:absolute;left:16px;top:16px;z-index:5;display:flex;flex-direction:column;gap:14px;pointer-events:none}
+  .geo-gauges .gauge{background:rgba(0,0,0,0.6);border:1px solid var(--line);padding:10px 12px;min-width:112px;backdrop-filter:blur(6px)}
+  .geo-gauges .gk{font-family:var(--mono);font-size:8.5px;letter-spacing:0.22em;color:var(--ink-4);text-transform:uppercase}
+  .geo-gauges .gk2{font-family:var(--mono);font-size:8.5px;letter-spacing:0.18em;color:var(--ink-3);text-transform:uppercase;margin-top:4px}
+  .geo-gauges .gv{font-family:var(--mono);font-size:11px;color:var(--ink-2);letter-spacing:0.2em;margin-top:6px}
+  .geo-gauges .gv.big{font-family:var(--serif);font-size:26px;color:var(--ink);font-weight:300;letter-spacing:-0.01em;line-height:1}
+  .geo-gauges .gv.accent{font-family:var(--serif);font-size:26px;color:var(--accent-2);font-weight:400;letter-spacing:-0.01em;line-height:1;text-shadow:0 0 12px var(--accent-glow)}
+  .geo-gauges .bars{display:flex;align-items:flex-end;gap:2px;height:22px;margin-top:6px}
+  .geo-gauges .bars i{display:block;width:7px;background:var(--accent);box-shadow:0 0 5px var(--accent-glow);animation:gaugeBar 1.8s ease-in-out infinite}
+  .geo-gauges .bars i:nth-child(1){animation-delay:0s}
+  .geo-gauges .bars i:nth-child(2){animation-delay:.12s}
+  .geo-gauges .bars i:nth-child(3){animation-delay:.24s}
+  .geo-gauges .bars i:nth-child(4){animation-delay:.36s}
+  .geo-gauges .bars i:nth-child(5){animation-delay:.48s}
+  .geo-gauges .bars i:nth-child(6){animation-delay:.6s}
+  .geo-gauges .bars i:nth-child(7){animation-delay:.72s}
+  @keyframes gaugeBar{0%,100%{transform:scaleY(1);opacity:.9}50%{transform:scaleY(.55);opacity:.55}}
+
+  .geo-ticker{position:absolute;left:0;right:0;bottom:0;z-index:5;display:flex;align-items:center;background:rgba(0,0,0,0.75);border-top:1px solid var(--line);font-family:var(--mono);font-size:10px;height:32px;overflow:hidden}
+  .geo-ticker .tk-label{padding:0 14px;color:var(--accent);letter-spacing:0.2em;font-size:9px;border-right:1px solid var(--line);height:100%;display:flex;align-items:center;background:rgba(212,175,110,0.06);flex-shrink:0}
+  .geo-ticker .tk-scroll{flex:1;overflow:hidden;position:relative;height:100%}
+  .geo-ticker .tk-inner{display:flex;gap:28px;align-items:center;height:100%;white-space:nowrap;padding-left:20px;animation:tkScroll 42s linear infinite;color:var(--ink-3);letter-spacing:0.08em}
+  .geo-ticker .tk-inner .dot{color:var(--ink-4);opacity:.5}
+  @keyframes tkScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  .geo-footline{position:relative;z-index:3;display:flex;justify-content:space-between;padding:18px 32px 24px;font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.15em;text-transform:uppercase}
+  .geo-footline .pip{display:inline-block;width:6px;height:6px;background:var(--accent-2);border-radius:50%;box-shadow:0 0 8px var(--accent-glow);margin-right:6px;vertical-align:middle}
+
+  /* Ensure SVG inside geo-stage fills correctly */
+  .geo-svg text{font-family:var(--mono)}
+
+  /* Constellation readout (right column of merged geo panel) */
+  .geo-stage.merged{margin:0;height:760px;border-left:0;border-right:0}
+  .geo-readout{position:absolute;top:0;right:0;bottom:48px;width:46%;z-index:6;pointer-events:none;display:flex;flex-direction:column;justify-content:center;padding:32px 36px 24px 0}
+  .geo-readout .ro-head{font-family:var(--mono);font-size:9px;letter-spacing:0.22em;color:var(--ink-4);text-transform:uppercase;display:flex;justify-content:space-between;padding:0 0 18px 0;border-bottom:1px dashed rgba(212,175,110,0.2);margin-bottom:8px}
+  .geo-readout .ro-row{display:grid;grid-template-columns:28px 1fr 48px 92px;gap:18px;align-items:center;padding:8px 0 12px;position:relative}
+  .geo-readout .ro-row .rk{font-family:var(--mono);font-size:10px;color:var(--ink-4);letter-spacing:0.12em}
+  .geo-readout .ro-row .nm{font-family:var(--serif);font-size:16px;color:var(--ink);font-weight:400;letter-spacing:-0.005em}
+  .geo-readout .ro-row .or{font-family:var(--mono);font-size:12px;color:var(--ink-2);letter-spacing:0.08em;text-align:right}
+  .geo-readout .ro-row .rv{font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:0.06em;text-align:right}
+  .geo-readout .ro-row.home{padding:12px 0 16px}
+  .geo-readout .ro-row.home .rk{color:var(--accent)}
+  .geo-readout .ro-row.home .nm{color:var(--accent-2);font-size:20px;text-shadow:0 0 14px rgba(212,175,110,0.25)}
+  .geo-readout .ro-row.home .or{color:var(--accent-2);font-size:14px}
+  .geo-readout .ro-row.home .rv{color:var(--accent)}
+  .geo-readout .ro-row.home .tag{grid-column:2/-1;font-family:var(--mono);font-size:8.5px;letter-spacing:0.22em;color:oklch(0.78 0.06 80 / 0.85);text-transform:uppercase;margin-top:2px}
+  .geo-readout .ro-row.other .nm{color:var(--ink-3);font-style:italic;font-size:13px}
+  .geo-readout .ro-row.other .or, .geo-readout .ro-row.other .rv, .geo-readout .ro-row.other .rk{color:var(--ink-4)}
+  /* divider removed — bars convey rhythm */
+
+  /* Order fill bar under each row (spans columns 2 - end) */
+  .geo-readout .ro-row .bar{grid-column:2/-1;height:3px;background:rgba(212,175,110,0.06);margin-top:10px;position:relative;overflow:visible;border-left:1px solid rgba(212,175,110,0.22)}
+  .geo-readout .ro-row .bar i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(to right, oklch(0.68 0.08 78 / 0.55), oklch(0.86 0.10 82 / 0.9));width:0;transition:width .45s cubic-bezier(.2,.7,.2,1);box-shadow:0 0 6px oklch(0.82 0.09 80 / 0.4)}
+  .geo-readout .ro-row .bar i::after{content:"";position:absolute;right:-2px;top:50%;width:6px;height:6px;background:oklch(0.96 0.06 90);transform:translateY(-50%) rotate(45deg);box-shadow:0 0 10px var(--accent-glow);opacity:.85}
+  .geo-readout .ro-row.home .bar{height:4px;background:rgba(212,175,110,0.12);border-left-color:var(--accent)}
+  .geo-readout .ro-row.home .bar i{background:linear-gradient(to right, oklch(0.78 0.11 75), oklch(0.96 0.09 88));box-shadow:0 0 14px var(--accent-glow)}
+  .geo-readout .ro-row.other .bar{display:none}
+  /* Arrival flash on the row pip when an order lands */
+  .geo-readout .ro-row.pulse::after{animation:roPulse .8s ease-out}
+  @keyframes roPulse{0%{box-shadow:0 0 0 0 var(--accent-glow);background:oklch(0.98 0.08 88)}100%{box-shadow:0 0 14px 6px transparent;background:oklch(0.86 0.09 85 / 0.5)}}
+
+  /* Leader line endpoint pips on readout rows */
+  .geo-readout .ro-row::after{content:"";position:absolute;left:-10px;top:22px;width:4px;height:4px;background:oklch(0.86 0.09 85 / 0.5);transform:translateY(-50%) rotate(45deg);transition:box-shadow .2s, background .2s}
+  .geo-readout .ro-row.home::after{background:oklch(0.96 0.06 90);box-shadow:0 0 8px var(--accent-glow);width:6px;height:6px;top:32px}
+  .geo-readout .ro-row.other::after{display:none}
+
+  /* ——— ATTRIBUTION ——— */
+  .attr-card{border:1px solid var(--line);background:var(--bg-1);padding:40px}
+  .flow{display:grid;grid-template-columns:1fr 2fr 1fr;gap:0;align-items:center;margin-top:20px;min-height:360px;position:relative}
+  .flow .col{display:flex;flex-direction:column;gap:10px}
+  .flow .node{border:1px solid var(--line);padding:14px 18px;background:var(--bg-2);position:relative}
+  .flow .node .k{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.15em;text-transform:uppercase}
+  .flow .node .v{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);margin-top:4px}
+  .flow .node .pct{font-family:var(--mono);font-size:11px;color:var(--accent-2);margin-top:4px;letter-spacing:0.08em}
+  .flow .node.dim .v{color:var(--ink-2)}
+  .flow .node.dim .pct{color:var(--ink-3)}
+  .flow svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+
+  .attr-footer{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}
+  .attr-footer > div{background:var(--bg-1);padding:22px}
+  .attr-footer .k{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.18em;text-transform:uppercase}
+  .attr-footer .v{font-family:var(--serif);font-size:32px;font-weight:300;color:var(--ink);margin-top:10px;letter-spacing:-0.02em}
+  .attr-footer .v em{color:var(--accent-2);font-style:normal}
+  .attr-footer .d{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:6px;letter-spacing:0.06em}
+
+  /* ——— BASELINE ——— */
+  .lift{border:1px solid var(--line);background:var(--bg-1);padding:44px 48px}
+  .lift-grid{display:grid;grid-template-columns: 1fr 1fr 1fr;gap:48px;align-items:center}
+  .lift-col .k{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:18px}
+  .lift-col .row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px dashed var(--line);font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+  .lift-col .row .v{color:var(--ink);font-size:14px}
+  .lift-col.center{text-align:center}
+  .multiplier{font-family:var(--serif);font-size:200px;font-weight:300;line-height:0.85;letter-spacing:-0.05em;color:var(--accent-2);position:relative}
+  .multiplier .x{font-size:90px;color:var(--accent);vertical-align:top}
+  .multiplier-label{font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:0.2em;text-transform:uppercase;margin-top:10px}
+
+  .spark{height:80px;width:100%;margin-top:28px;position:relative}
+
+  /* customer acquisition */
+  .acq{display:grid;grid-template-columns: 1.3fr 1fr;gap:24px}
+  .acq-ring{border:1px solid var(--line);background:var(--bg-1);padding:40px;display:flex;align-items:center;justify-content:center;gap:44px}
+  .ring-wrap{position:relative;width:260px;height:260px}
+  .ring-wrap svg{width:100%;height:100%;transform:rotate(-90deg)}
+  .ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .ring-center .n{font-family:var(--serif);font-size:84px;font-weight:300;color:var(--accent-2);line-height:1;letter-spacing:-0.03em}
+  .ring-center .l{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.2em;text-transform:uppercase;margin-top:6px}
+  .acq-legend{display:flex;flex-direction:column;gap:24px}
+  .acq-legend .li{border-left:2px solid var(--accent);padding-left:16px}
+  .acq-legend .li.dim{border-left-color:var(--ink-4)}
+  .acq-legend .k{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.18em;text-transform:uppercase}
+  .acq-legend .v{font-family:var(--serif);font-size:40px;font-weight:300;color:var(--ink);letter-spacing:-0.02em;line-height:1.1;margin-top:4px}
+  .acq-legend .li.dim .v{color:var(--ink-2)}
+
+  /* momentum */
+  .mom{display:grid;grid-template-columns: 1fr 1fr 1.6fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .mom > div{background:var(--bg-1);padding:30px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between}
+  .mom .k{font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.2em;text-transform:uppercase}
+  .mom .v{font-family:var(--serif);font-size:56px;font-weight:300;color:var(--ink);line-height:1;letter-spacing:-0.03em;margin-top:14px}
+  .mom .d{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:10px;letter-spacing:0.08em}
+  .mom .asset{background:linear-gradient(180deg, rgba(190,140,60,0.08), rgba(190,140,60,0.01));border:1px solid var(--accent) !important}
+  .mom .asset .k{color:var(--accent)}
+  .mom .asset .v{color:var(--accent-2);font-style:italic}
+  .mom .asset .d{color:var(--ink-2);font-family:var(--serif);font-style:italic;font-size:16px;letter-spacing:0;line-height:1.45;max-width:380px}
+
+  /* footer */
+  .footer{margin-top:100px;padding:40px 0 20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;color:var(--ink-4);letter-spacing:0.18em;text-transform:uppercase}
+  .footer .logo-sm svg{height:16px;width:auto;opacity:0.6;display:block}
+
+  /* misc */
+  .row-hairline{height:1px;background:var(--line);margin:8px 0}
+  .no-wrap{white-space:nowrap}
+  .mono{font-family:var(--mono)}
+
+  /* hero numbers: render statically — no animation to keep screenshots stable */
+  .fade{opacity:1}
+  .fade.d1,.fade.d2,.fade.d3{opacity:1}
+
+  /* ——— ANIMATIONS ——— */
+  /* Everything defaults to its FINAL visible state. JS adds .anim-ready to <html>
+     only on real user sessions; when present, elements rewind to initial and play in. */
+  html.anim-ready .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1)}
+  html.anim-ready .reveal.in{opacity:1;transform:none}
+  html.anim-ready .reveal-up{opacity:0;transform:translateY(40px);transition:opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1)}
+  html.anim-ready .reveal-up.in{opacity:1;transform:none}
+  html.anim-ready .reveal-left{opacity:0;transform:translateX(-24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)}
+  html.anim-ready .reveal-left.in{opacity:1;transform:none}
+  html.anim-ready .reveal-right{opacity:0;transform:translateX(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)}
+  html.anim-ready .reveal-right.in{opacity:1;transform:none}
+  html.anim-ready .reveal-scale{opacity:0;transform:scale(.96);transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)}
+  html.anim-ready .reveal-scale.in{opacity:1;transform:none}
+
+  /* staggered grid reveal */
+  html.anim-ready .stagger > *{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)}
+  html.anim-ready .stagger.in > *{opacity:1;transform:none}
+  html.anim-ready .stagger.in > *:nth-child(1){transition-delay:.00s}
+  html.anim-ready .stagger.in > *:nth-child(2){transition-delay:.06s}
+  html.anim-ready .stagger.in > *:nth-child(3){transition-delay:.12s}
+  html.anim-ready .stagger.in > *:nth-child(4){transition-delay:.18s}
+  html.anim-ready .stagger.in > *:nth-child(5){transition-delay:.24s}
+  html.anim-ready .stagger.in > *:nth-child(6){transition-delay:.30s}
+  html.anim-ready .stagger.in > *:nth-child(7){transition-delay:.36s}
+  html.anim-ready .stagger.in > *:nth-child(8){transition-delay:.42s}
+  html.anim-ready .stagger.in > *:nth-child(9){transition-delay:.48s}
+  html.anim-ready .stagger.in > *:nth-child(10){transition-delay:.54s}
+  html.anim-ready .stagger.in > *:nth-child(11){transition-delay:.60s}
+  html.anim-ready .stagger.in > *:nth-child(12){transition-delay:.66s}
+
+  /* animated bar fill */
+  html.anim-ready .bar i, html.anim-ready .mini-bar i, html.anim-ready .pct i, html.anim-ready .track .us, html.anim-ready .track .industry{
+    transform-origin:left center;transform:scaleX(0);transition:transform 1.4s cubic-bezier(.2,.7,.2,1) .2s;
+  }
+  html.anim-ready .in .bar i, html.anim-ready .in .mini-bar i, html.anim-ready .in .pct i,
+  html.anim-ready .in .track .us, html.anim-ready .in .track .industry,
+  html.anim-ready .bar i.in, html.anim-ready .mini-bar i.in{transform:scaleX(1)}
+
+  /* counters — starting invisible by class only */
+  html.anim-ready .count-up{opacity:0;transition:opacity .4s}
+  html.anim-ready .count-up.in{opacity:1}
+
+  /* timeline dot pulse (ongoing) */
+  @keyframes pulseDot{
+    0%,100%{box-shadow:0 0 0 4px rgba(0,0,0,0.9), 0 0 18px var(--accent-glow)}
+    50%{box-shadow:0 0 0 4px rgba(0,0,0,0.9), 0 0 28px oklch(0.78 0.11 75 / 0.6)}
+  }
+  .tl-node .dot{animation:pulseDot 2.4s ease-in-out infinite}
+  .tl-node.past .dot{animation:none}
+  .topbar .dot{animation:pulseDot 2.4s ease-in-out infinite}
+
+  /* shimmer for accent numbers */
+  @keyframes shimmer{
+    0%{background-position:-200% 0}
+    100%{background-position:200% 0}
+  }
+  html.anim-ready .shimmer{
+    background:linear-gradient(90deg, var(--accent-2) 0%, oklch(0.96 0.06 90) 45%, var(--accent-2) 55%, var(--accent-2) 100%);
+    background-size:200% 100%;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:shimmer 6s ease-in-out infinite;
+  }
+
+  /* ring draw-on */
+  html.anim-ready .ring-wrap circle:nth-child(2){stroke-dasharray:0 502.65;transition:stroke-dasharray 1.8s cubic-bezier(.2,.7,.2,1) .3s}
+  html.anim-ready .ring-wrap.in circle:nth-child(2){stroke-dasharray:415.48 502.65}
+
+  /* hover micro-interactions */
+  .trophy{transition:transform .4s cubic-bezier(.2,.7,.2,1), background .4s, border-color .4s}
+  .trophy:hover{background:var(--bg-2);transform:translateY(-2px)}
+  .trophy.accent{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+  .trophy.accent:hover{transform:translateY(-2px)}
+
+  .creative-row{transition:background .3s}
+  .creative-row:hover{background:var(--bg-2)}
+
+  .gb-row{transition:background .3s, padding-left .3s}
+  .gb-row:hover:not(.home){background:var(--bg-2);padding-left:28px}
+
+  .pl-row{transition:background .3s}
+  .pl-row:hover{background:var(--bg-2)}
+
+  .er-row{transition:background .3s}
+  .er-row:hover{background:var(--bg-2)}
+
+  /* sankey flow pulse */
+  @keyframes flowDash{to{stroke-dashoffset:-40}}
+  html.anim-ready #sankeySvg path[data-flow]{stroke-dasharray:2 6;animation:flowDash 3s linear infinite;opacity:.5}
+
+  /* curve path draw */
+  html.anim-ready #curvePath{stroke-dasharray:3000;stroke-dashoffset:3000;transition:stroke-dashoffset 2.2s cubic-bezier(.2,.7,.2,1) .3s, fill-opacity 1.2s ease .8s;fill-opacity:0}
+  html.anim-ready .timeline.in #curvePath{stroke-dashoffset:0;fill-opacity:1}
+
+  /* hero headline staggered word reveal */
+  html.anim-ready .hero h1 .w{display:inline-block;opacity:0;transform:translateY(20px);transition:opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1)}
+  html.anim-ready .hero.in h1 .w{opacity:1;transform:none}
+  html.anim-ready .hero.in h1 .w:nth-child(1){transition-delay:.15s}
+  html.anim-ready .hero.in h1 .w:nth-child(2){transition-delay:.3s}
+
+  /* crosshair subtle pulse */
+  @keyframes crosshairPulse{0%,100%{opacity:.7}50%{opacity:1}}
+  .crosshair{animation:crosshairPulse 3s ease-in-out infinite}
+
+  /* multiplier float */
+  @keyframes floatSlow{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+  .multiplier{animation:floatSlow 5s ease-in-out infinite}
+
+  /* halo pulse on geo */
+  @keyframes haloPulse{0%,100%{opacity:1}50%{opacity:.75}}
+  .geo-viz svg circle[fill^="url(#ga"]{animation:haloPulse 4s ease-in-out infinite}
+
+  /* reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    html.anim-ready *{animation:none !important;transition:none !important}
+    html.anim-ready .reveal, html.anim-ready .reveal-up, html.anim-ready .reveal-left, html.anim-ready .reveal-right, html.anim-ready .reveal-scale{opacity:1;transform:none}
+    html.anim-ready .stagger > *{opacity:1;transform:none}
+    html.anim-ready .bar i, html.anim-ready .mini-bar i, html.anim-ready .pct i{transform:scaleX(1)}
+  }
+
+  /* ==========================================================
+     AMBIENT LOOPING ANIMATIONS — Hero, Trophies, Timeline (v1), Meta, Email
+     ========================================================== */ — Hero, Trophies, Timeline, Meta, Email
+     ========================================================== */
+
+  /* —— HERO: slow scanline + drifting aurora + chromatic glow on h1 —— */
+  @keyframes heroAurora{
+    0%,100%{transform:translate(0,0) scale(1);opacity:.55}
+    33%{transform:translate(40px,-20px) scale(1.08);opacity:.75}
+    66%{transform:translate(-30px,15px) scale(1.04);opacity:.6}
+  }
+  @keyframes heroAurora2{
+    0%,100%{transform:translate(0,0) scale(1.1);opacity:.45}
+    50%{transform:translate(-50px,25px) scale(1.2);opacity:.7}
+  }
+  .hero{overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;top:-40%;right:-10%;width:700px;height:700px;border-radius:50%;
+    background:radial-gradient(circle, oklch(0.78 0.11 75 / 0.18), transparent 60%);
+    filter:blur(40px);animation:heroAurora 14s ease-in-out infinite;pointer-events:none;z-index:0;
+  }
+  .hero::after{
+    content:"";position:absolute;bottom:-30%;left:-10%;width:600px;height:600px;border-radius:50%;
+    background:radial-gradient(circle, oklch(0.86 0.09 85 / 0.10), transparent 60%);
+    filter:blur(50px);animation:heroAurora2 18s ease-in-out infinite;pointer-events:none;z-index:0;
+  }
+  .hero > *{position:relative;z-index:1}
+
+  @keyframes heroScan{
+    0%{transform:translateY(-100%)}
+    100%{transform:translateY(2000%)}
+  }
+  .hero .scanline{
+    position:absolute;left:0;right:0;height:1px;top:0;
+    background:linear-gradient(90deg, transparent, oklch(0.86 0.09 85 / 0.35), transparent);
+    animation:heroScan 9s linear infinite;pointer-events:none;z-index:2;
+  }
+
+  /* h1 breathe — slow letter-spacing breathing */
+  @keyframes h1Breathe{
+    0%,100%{letter-spacing:-0.03em;text-shadow:0 0 40px oklch(0.78 0.11 75 / 0)}
+    50%{letter-spacing:-0.028em;text-shadow:0 0 60px oklch(0.78 0.11 75 / 0.15)}
+  }
+  .hero h1{animation:h1Breathe 8s ease-in-out infinite}
+
+  /* eyebrow bar grow/shrink */
+  @keyframes barBreathe{0%,100%{width:40px}50%{width:80px}}
+  .hero .eyebrow .bar{animation:barBreathe 4s ease-in-out infinite}
+
+  /* hero-grid status icon pulse */
+  @keyframes statusPulse{
+    0%,100%{text-shadow:0 0 0 oklch(0.86 0.09 85 / 0)}
+    50%{text-shadow:0 0 20px oklch(0.86 0.09 85 / 0.8)}
+  }
+  .hero-grid .v[style*="accent-2"]{animation:statusPulse 2.4s ease-in-out infinite}
+
+  /* —— TROPHIES: slow ambient glow sweep + corner glint + data ticks —— */
+  @keyframes trophyGlow{
+    0%,100%{box-shadow:inset 0 0 0 0 oklch(0.78 0.11 75 / 0)}
+    50%{box-shadow:inset 0 0 40px 0 oklch(0.78 0.11 75 / 0.08)}
+  }
+  .trophy.accent{animation:trophyGlow 4s ease-in-out infinite;position:relative;overflow:hidden}
+  .trophy.accent:nth-of-type(2){animation-delay:-2s}
+
+  /* sweeping highlight across trophy row */
+  @keyframes trophySweep{
+    0%{transform:translateX(-100%)}
+    100%{transform:translateX(100%)}
+  }
+  .trophies{position:relative;overflow:hidden}
+  .trophies::after{
+    content:"";position:absolute;top:0;bottom:0;width:40%;
+    background:linear-gradient(90deg, transparent, oklch(0.86 0.09 85 / 0.04), transparent);
+    animation:trophySweep 8s linear infinite;pointer-events:none;z-index:1;
+  }
+  .trophy > *{position:relative;z-index:2}
+
+  /* trophy tick counter cycling */
+  @keyframes tickFlicker{
+    0%,97%,100%{opacity:1}
+    98%{opacity:0.3}
+    99%{opacity:1}
+  }
+  .trophy .tick{animation:tickFlicker 5s steps(1,end) infinite}
+  .trophy:nth-of-type(2) .tick{animation-delay:-1s}
+  .trophy:nth-of-type(3) .tick{animation-delay:-2s}
+  .trophy:nth-of-type(4) .tick{animation-delay:-3s}
+  .trophy:nth-of-type(5) .tick{animation-delay:-4s}
+
+  /* number breathing for accent trophies */
+  @keyframes numBreathe{
+    0%,100%{filter:drop-shadow(0 0 0 oklch(0.86 0.09 85 / 0))}
+    50%{filter:drop-shadow(0 0 24px oklch(0.86 0.09 85 / 0.45))}
+  }
+  .trophy.accent .num{animation:numBreathe 5s ease-in-out infinite}
+
+  /* —— TIMELINE: traveling pulse along axis + curve shimmer + node ring expand —— */
+  @keyframes axisPulse{
+    0%{background-position:-200px 0}
+    100%{background-position:calc(100% + 200px) 0}
+  }
+  .timeline-axis{
+    background:linear-gradient(90deg, var(--line-2) 0%, var(--line-2) 40%, oklch(0.86 0.09 85 / 0.8) 48%, oklch(0.78 0.11 75) 50%, oklch(0.86 0.09 85 / 0.8) 52%, var(--line-2) 60%, var(--line-2) 100%);
+    background-size:200% 100%;
+    animation:axisPulse 6s linear infinite;
+  }
+
+  /* expanding ring halo on active nodes */
+  @keyframes nodeRing{
+    0%{box-shadow:0 0 0 0 oklch(0.78 0.11 75 / 0.6), 0 0 0 4px rgba(0,0,0,0.9), 0 0 18px var(--accent-glow)}
+    70%{box-shadow:0 0 0 20px oklch(0.78 0.11 75 / 0), 0 0 0 4px rgba(0,0,0,0.9), 0 0 18px var(--accent-glow)}
+    100%{box-shadow:0 0 0 0 oklch(0.78 0.11 75 / 0), 0 0 0 4px rgba(0,0,0,0.9), 0 0 18px var(--accent-glow)}
+  }
+  .tl-node:not(.past) .dot{animation:nodeRing 2.8s ease-out infinite}
+  .tl-node:not(.past):nth-of-type(2) .dot{animation-delay:-0.7s}
+  .tl-node:not(.past):nth-of-type(3) .dot{animation-delay:-1.4s}
+  .tl-node:not(.past):nth-of-type(4) .dot{animation-delay:-2.1s}
+
+  /* curve fill breathe */
+  @keyframes curveBreathe{
+    0%,100%{fill-opacity:0.7}
+    50%{fill-opacity:1}
+  }
+  html.anim-ready .timeline.in #curvePath{animation:curveBreathe 5s ease-in-out 2.6s infinite}
+
+  /* week bar pulse — slowly brighten the winning week */
+  @keyframes weekGlow{
+    0%,100%{box-shadow:0 0 0 oklch(0.78 0.11 75 / 0)}
+    50%{box-shadow:0 0 18px oklch(0.78 0.11 75 / 0.3)}
+  }
+  .week .bar i{animation:weekGlow 3.5s ease-in-out infinite}
+
+  /* —— META ADS: winning row subtle highlight wash + placement sweep —— */
+  @keyframes winnerWash{
+    0%,100%{background:transparent}
+    50%{background:linear-gradient(90deg, transparent, oklch(0.78 0.11 75 / 0.06) 50%, transparent)}
+  }
+  .creative-row:first-child{animation:winnerWash 6s ease-in-out infinite}
+
+  @keyframes winnerTick{
+    0%,100%{opacity:1}
+    50%{opacity:0.5}
+  }
+  .creative-row:first-child .tl em{animation:winnerTick 2s ease-in-out infinite}
+
+  /* mini-bar shimmer on winner */
+  @keyframes barShimmer{
+    0%{background-position:-100% 0}
+    100%{background-position:200% 0}
+  }
+  .creative-row:first-child .mini-bar i{
+    background:linear-gradient(90deg, var(--accent) 0%, oklch(0.92 0.08 90) 50%, var(--accent) 100%);
+    background-size:200% 100%;
+    animation:barShimmer 3s linear infinite;
+  }
+
+  /* split placement sweep — scale vs efficiency */
+  @keyframes splitSweep{
+    0%,100%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+  }
+  .split .pct i{
+    background:linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 50%, var(--accent) 100%);
+    background-size:300% 100%;
+    animation:splitSweep 5s ease-in-out infinite;
+  }
+
+  /* reach grid numbers — staggered subtle pulse */
+  @keyframes reachPulse{
+    0%,100%{opacity:1}
+    50%{opacity:0.85}
+  }
+  .reach-grid .v{animation:reachPulse 4s ease-in-out infinite}
+  .reach-grid > div:nth-child(2) .v{animation-delay:-1s}
+  .reach-grid > div:nth-child(3) .v{animation-delay:-2s}
+  .reach-grid > div:nth-child(4) .v{animation-delay:-3s}
+
+  /* —— EMAIL: 58% number breathe + benchmark bar slow sweep + envelope ping —— */
+  @keyframes bigBreathe{
+    0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 oklch(0.86 0.09 85 / 0))}
+    50%{transform:scale(1.015);filter:drop-shadow(0 0 40px oklch(0.86 0.09 85 / 0.5))}
+  }
+  .email-hero .big{animation:bigBreathe 5s ease-in-out infinite;display:inline-block;transform-origin:left center}
+
+  @keyframes emailGlow{
+    0%,100%{background:radial-gradient(400px 200px at 90% 100%, oklch(0.78 0.11 75 / 0.15), transparent 60%)}
+    50%{background:radial-gradient(500px 250px at 90% 100%, oklch(0.78 0.11 75 / 0.30), transparent 60%)}
+  }
+  .email-hero::before{animation:emailGlow 6s ease-in-out infinite}
+
+  /* benchmark marker pulse */
+  @keyframes markerBlink{
+    0%,100%{background:var(--accent-2);box-shadow:0 0 0 oklch(0.86 0.09 85 / 0)}
+    50%{background:var(--accent-2);box-shadow:0 0 12px oklch(0.86 0.09 85 / 0.8)}
+  }
+  .bench .track .marker:last-of-type{animation:markerBlink 2.5s ease-in-out infinite}
+
+  /* benchmark "us" bar progressing shimmer */
+  @keyframes usShimmer{
+    0%{background-position:-100% 0}
+    100%{background-position:200% 0}
+  }
+  .bench .track .us{
+    background:linear-gradient(90deg, var(--accent) 0%, oklch(0.92 0.08 90) 50%, var(--accent-2) 100%) !important;
+    background-size:200% 100% !important;
+    animation:usShimmer 4s linear infinite;
+  }
+
+  /* email row stream: subtle highlight that ticks down the rows */
+  @keyframes rowPing{
+    0%,100%{background:transparent}
+    20%{background:oklch(0.78 0.11 75 / 0.06)}
+    40%{background:transparent}
+  }
+  .er-row:nth-child(2){animation:rowPing 6s ease-in-out infinite}
+  .er-row:nth-child(3){animation:rowPing 6s ease-in-out infinite;animation-delay:-2s}
+  .er-row:nth-child(4){animation:rowPing 6s ease-in-out infinite;animation-delay:-4s}
+
+  /* total row — accent revenue number breathe */
+  @keyframes revBreathe{0%,100%{opacity:1}50%{opacity:.75}}
+  .er-row:last-child > div:last-child{animation:revBreathe 3s ease-in-out infinite}
+
+  /* topbar dot already pulses; add traveling highlight on border-bottom */
+  @keyframes topbarSweep{
+    0%{background-position:-200px 0}
+    100%{background-position:calc(100% + 200px) 0}
+  }
+  .topbar{
+    border-bottom:1px solid transparent;
+    background-image:
+      linear-gradient(rgba(11,11,12,0.85), rgba(11,11,12,0.85)),
+      linear-gradient(90deg, var(--line) 0%, var(--line) 45%, oklch(0.78 0.11 75 / 0.6) 50%, var(--line) 55%, var(--line) 100%);
+    background-size:100% calc(100% - 1px), 200% 1px;
+    background-position:0 0, 0 100%;
+    background-repeat:no-repeat, no-repeat;
+    animation:topbarSweep 10s linear infinite;
+  }
+
+  /* corner ticks */
+  .crosshair{position:absolute;width:10px;height:10px;border:1px solid var(--accent);opacity:0.7}
+  .crosshair.tl{top:-1px;left:-1px;border-right:0;border-bottom:0}
+  .crosshair.tr{top:-1px;right:-1px;border-left:0;border-bottom:0}
+  .crosshair.bl{bottom:-1px;left:-1px;border-right:0;border-top:0}
+  .crosshair.br{bottom:-1px;right:-1px;border-left:0;border-top:0}
+
+  /* ====================================================================
+     RESPONSIVE · TABLET  ≤ 1200px
+     Preserve desktop character; tighten paddings, allow safe wrapping.
+     ==================================================================== */
+  @media (max-width: 1200px){
+    .page{padding:0 32px 80px}
+    .hero h1{font-size:96px}
+    .hero .sub{font-size:22px}
+    .sec-head h2{font-size:36px}
+    .trophies{grid-template-columns:repeat(3,1fr)}
+    .trophy .num{font-size:44px}
+    .timeline-card{padding:36px 28px 32px}
+    .prod-row, .prod-leader{grid-template-columns:44px 1.2fr 80px 80px 1.6fr;padding-left:24px;padding-right:24px}
+    .prod-row.hero .nm{font-size:26px}
+    .prod-row.hero .un{font-size:30px}
+    .email-hero{padding:32px 32px}
+    .email-hero .big{font-size:110px}
+    .email-hero .big .pct{font-size:56px}
+    .er-head, .er-row{grid-template-columns:1.8fr .9fr .9fr .9fr .9fr .9fr 1fr;padding:12px 18px;gap:12px;font-size:11px}
+    .grid-2{grid-template-columns:1fr}
+    .flow{grid-template-columns:1fr 1.2fr 1fr}
+    .acq{grid-template-columns:1fr}
+    .lift{padding:36px 32px}
+    .multiplier{font-size:160px}
+    .multiplier .x{font-size:72px}
+  }
+
+  /* ====================================================================
+     RESPONSIVE · MOBILE  ≤ 760px
+     Full mobile reflow: single-column stacking, simpler sci-fi console,
+     readable typographic rhythm.
+     ==================================================================== */
+  @media (max-width: 760px){
+    .page{padding:0 18px 60px;max-width:100%}
+
+    /* — Topbar — compress & allow second line — */
+    .topbar{padding:16px 0 12px;flex-direction:column;align-items:flex-start;gap:10px;position:static}
+    .topbar .meta{gap:10px;font-size:9px;flex-wrap:wrap}
+    .topbar .meta .sep{display:none}
+    .topbar .logo svg, .topbar .logo img{height:18px !important}
+
+    /* — Hero — */
+    .hero{padding:48px 0 36px}
+    .hero .eyebrow{font-size:9px;letter-spacing:0.18em;margin-bottom:20px}
+    .hero .eyebrow .bar{width:24px}
+    .hero h1{font-size:56px;line-height:0.96;letter-spacing:-0.025em;margin-bottom:14px}
+    .hero .sub{font-size:16px;margin-bottom:32px;line-height:1.4}
+    .hero-grid{grid-template-columns:1fr 1fr}
+    .hero-grid > div{padding:14px 14px}
+    .hero-grid .k{font-size:9px;margin-bottom:6px;letter-spacing:0.15em}
+    .hero-grid .v{font-size:12px}
+    .hero::before{width:380px;height:380px;top:-20%;right:-30%;filter:blur(30px)}
+    .hero::after{width:320px;height:320px;left:-30%;filter:blur(36px)}
+
+    /* — Section headers — */
+    .sec-head{padding:56px 0 20px;flex-direction:column;align-items:flex-start;gap:10px}
+    .sec-head h2{font-size:26px;line-height:1.05}
+    .sec-head .id{font-size:9px;letter-spacing:0.2em}
+    .sec-head .note{text-align:left;font-size:10px;max-width:100%}
+    .sec-sub{font-size:15px;line-height:1.45;margin-top:10px}
+
+    /* — Trophies — two up, smaller numbers — */
+    .trophies{grid-template-columns:1fr 1fr}
+    .trophy{padding:20px 16px 18px;min-height:150px}
+    .trophy .label{font-size:9px;margin-bottom:14px;letter-spacing:0.14em}
+    .trophy .num{font-size:32px;letter-spacing:-0.02em}
+    .trophy .num .pre{font-size:18px}
+    .trophy .num .suf{font-size:14px}
+    .trophy .sub{font-size:10px;margin-top:10px}
+    .trophy .tick{font-size:9px;top:10px;right:10px}
+
+    /* — Timeline — horizontal-scroll the stage so cards stay legible — */
+    .timeline-card{padding:24px 14px 28px;position:relative}
+    #tlReadout{flex-direction:column;gap:12px;align-items:flex-start !important}
+    #tlReadout > div:nth-child(2){gap:18px !important;flex-wrap:wrap}
+    #tlDay{font-size:22px !important}
+    #tlOrd, #tlCum{font-size:20px !important}
+    .timeline{padding:12px 0 12px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--accent-dim) transparent}
+    .timeline::-webkit-scrollbar{height:4px}
+    .timeline::-webkit-scrollbar-thumb{background:var(--accent-dim);border-radius:2px}
+    #tlStage{height:400px !important;min-width:720px;width:720px !important}
+    .tl-evt{width:130px;top:10px !important}
+    .tl-evt .tag{font-size:9px;padding:2px 6px;letter-spacing:0.14em;margin-bottom:8px}
+    .tl-evt .ttl{font-size:14px;white-space:nowrap}
+    .tl-evt .sub{font-size:9px;white-space:nowrap;letter-spacing:0.02em}
+    .tl-evt[data-day="13"]{top:86px !important}
+    .tl-hash .lbl{font-size:8px;letter-spacing:0.08em}
+    .tl-phase{font-size:8px;padding:2px 0 0 6px;letter-spacing:0.1em}
+    .weeks{grid-template-columns:1fr;margin-top:28px}
+    .week{padding:18px 18px 20px}
+    .week .h{flex-direction:column;align-items:flex-start;gap:4px;margin-bottom:12px}
+    .week .roas{font-size:34px}
+    .week .stat{font-size:11px}
+
+    /* — Meta ads creative rows — tabular → card stacks — */
+    .panel{padding:22px 18px}
+    .panel .h{flex-direction:column;align-items:flex-start;gap:6px;margin-bottom:18px}
+    .panel .h .t{font-size:18px}
+    .creative-row{grid-template-columns:1fr 1fr;gap:10px;padding:14px 0;row-gap:10px}
+    .creative-row .name{grid-column:1 / -1}
+    .creative-row .name .tl{font-size:16px}
+    .creative-row .cell{font-size:11px}
+    .creative-row .cell .k{font-size:8px;margin-bottom:3px}
+    .winner-badge{font-size:8px}
+    .split{grid-template-columns:1fr}
+    .split > div{padding:20px}
+    .split .ch{font-size:22px;margin-bottom:12px}
+    .split .row{font-size:11px}
+    .split .pct{height:26px;margin-top:16px}
+    .split .pct span{font-size:10px;right:8px}
+    .reach-grid{grid-template-columns:1fr 1fr}
+    .reach-grid > div{padding:16px}
+    .reach-grid .v{font-size:26px}
+    .reach-grid .k{font-size:9px}
+
+    /* — Email — */
+    .email-hero{padding:26px 18px}
+    .email-hero .lbl{font-size:9px;margin-bottom:8px}
+    .email-hero .big{font-size:84px;line-height:0.92}
+    .email-hero .big .pct{font-size:40px}
+    .email-hero .cap{font-size:15px;margin-top:8px}
+    .bench{flex-direction:column;align-items:stretch;gap:10px;margin-top:20px}
+    .bench > span:first-child{font-size:9px}
+    .bench .track{height:22px}
+    .bench .track .marker .lab{font-size:8px;top:-16px}
+    .bench .val{text-align:left;font-size:11px}
+    /* Email table → horizontal scroll, preserve grid structure */
+    .email-rows{margin-top:20px;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);scrollbar-width:thin;scrollbar-color:var(--accent-dim) transparent}
+    .email-rows::-webkit-scrollbar{height:4px}
+    .email-rows::-webkit-scrollbar-thumb{background:var(--accent-dim);border-radius:2px}
+    .er-head, .er-row{min-width:640px;border:0}
+    .er-head{padding:12px 16px;font-size:8.5px}
+    .er-row{padding:12px 16px;font-size:11px}
+    .er-row .name{font-size:14px}
+    .er-row .name span{display:block !important;margin-top:2px}
+
+    /* — Products leaderboard — compact — */
+    .prod-head{grid-template-columns:1fr;gap:10px;padding:20px 18px 16px}
+    .prod-head .ph-sub{font-size:16px}
+    .prod-head .ph-stat{text-align:left}
+    .prod-head .ph-stat b{font-size:22px}
+    .prod-wrap > .tele{padding:8px 18px;gap:10px;font-size:8px;letter-spacing:0.14em;overflow-x:auto;white-space:nowrap}
+    .prod-wrap > .tele span{flex-shrink:0}
+    .prod-leader{display:none}
+    .prod-row{grid-template-columns:30px 1fr 52px;grid-template-rows:auto auto;gap:6px 10px;padding:14px 16px;align-items:center}
+    .prod-row .rk{font-size:10px;grid-row:1;grid-column:1}
+    .prod-row > div:nth-child(2){grid-row:1/3;grid-column:2}
+    .prod-row .nm{font-size:16px}
+    .prod-row .sku{font-size:9px;margin-top:2px}
+    .prod-row .un{grid-row:1;grid-column:3;font-size:18px;text-align:right}
+    .prod-row .un .u{font-size:8px;margin-left:2px}
+    .prod-row .pct{grid-row:2;grid-column:3;font-size:11px;text-align:right}
+    .prod-row .bar-cell{grid-row:3;grid-column:1/-1;height:14px;margin-top:4px}
+    .prod-row .bar-cell .fill{height:6px}
+    .prod-row.hero .nm{font-size:22px}
+    .prod-row.hero .un{font-size:24px}
+    .prod-row.hero .pct{font-size:14px}
+    .prod-row.hero .bar-cell{height:22px}
+    .prod-row.hero .bar-cell .fill{height:10px}
+    .prod-row.hero::after{display:none}
+    .prod-foot-note{flex-direction:column;align-items:flex-start;gap:8px;padding:14px 16px 16px}
+    .prod-foot-note .ft-insight{font-size:13px}
+    .mixed{grid-template-columns:1fr;margin-top:18px}
+    .mixed > div{padding:18px}
+    .mixed .aov{font-size:34px}
+    .mixed .winner::after{font-size:10px;top:18px;right:18px;padding:2px 6px}
+
+    /* — Acquisition — stack ring — */
+    .acq-ring{flex-direction:column;padding:28px 18px;gap:28px}
+    .ring-wrap{width:200px;height:200px}
+    .ring-center .n{font-size:60px}
+    .ring-center .n span{font-size:32px !important}
+    .ring-center .l{font-size:9px}
+    .acq-legend{width:100%;gap:16px}
+    .acq-legend .v{font-size:30px}
+    .acq .panel{padding:24px 18px}
+    .acq .panel > div:last-child{gap:16px !important}
+    .acq .panel [style*="font-size:44px"]{font-size:26px !important}
+
+    /* — Geography — reshape: stage first, readout below — */
+    .geo-top{padding:10px 14px;font-size:8.5px;letter-spacing:0.12em;flex-direction:column;align-items:flex-start;gap:6px}
+    .geo-top .geo-coord{flex-wrap:wrap;gap:8px;font-size:8px}
+    .geo-title-row{padding:16px 16px 10px;flex-direction:column;align-items:flex-start;gap:10px}
+    .geo-title{font-size:18px}
+    .geo-sub{font-size:9px}
+    .geo-legend{gap:10px;font-size:8px;flex-wrap:wrap}
+    .geo-legend .sw{width:8px;height:8px}
+    .geo-stage.merged{height:auto !important;margin:0 8px !important;border:1px solid var(--line) !important;position:relative;padding-top:300px}
+    .geo-stage.merged > canvas, .geo-stage.merged > svg{position:absolute !important;top:0 !important;left:0 !important;right:0 !important;width:100% !important;height:300px !important}
+    .geo-stage.merged > .geo-scan{top:0 !important;bottom:auto !important;height:300px !important}
+    .geo-gauges{left:8px;top:8px;z-index:6}
+    .geo-gauges .gauge{padding:6px 8px;min-width:86px}
+    .geo-gauges .gk, .geo-gauges .gk2{font-size:7px;letter-spacing:0.14em}
+    .geo-gauges .gv{font-size:9px;margin-top:4px}
+    .geo-gauges .gv.big, .geo-gauges .gv.accent{font-size:18px}
+    .geo-gauges .bars{height:16px}
+    .geo-gauges .bars i{width:5px}
+    .geo-readout{position:relative !important;width:100% !important;right:auto !important;top:auto !important;bottom:auto !important;padding:20px 18px 16px !important;border-top:1px solid var(--line)}
+    .geo-readout .ro-head{font-size:8px;letter-spacing:0.16em;padding-bottom:10px}
+    .geo-readout .ro-row{grid-template-columns:22px 1fr 40px 72px;gap:10px;padding:6px 0 10px}
+    .geo-readout .ro-row .nm{font-size:14px}
+    .geo-readout .ro-row.home .nm{font-size:16px}
+    .geo-readout .ro-row .or{font-size:10px}
+    .geo-readout .ro-row .rv{font-size:9.5px}
+    .geo-readout .ro-row.home .tag{font-size:7.5px;letter-spacing:0.14em}
+    .geo-readout .ro-row::after{display:none}
+    .geo-ticker{position:relative !important;height:28px;font-size:8.5px}
+    .geo-ticker .tk-label{font-size:8px;padding:0 10px}
+    .geo-ticker .tk-inner{gap:18px;letter-spacing:0.04em}
+    .geo-footline{padding:14px 16px 18px;flex-direction:column;align-items:flex-start;gap:6px;font-size:8.5px;letter-spacing:0.12em}
+
+    /* — Attribution / Sankey — horizontal scroll for flow diagram — */
+    .attr-card{padding:20px 16px}
+    .attr-card > div:first-child{flex-direction:column;align-items:flex-start !important;gap:6px}
+    .attr-card > div:first-child > div:first-child{font-size:17px !important}
+    .attr-card .flow-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--accent-dim) transparent}
+    .attr-card .flow-scroll::-webkit-scrollbar{height:4px}
+    .attr-card .flow-scroll::-webkit-scrollbar-thumb{background:var(--accent-dim);border-radius:2px}
+    .attr-card .flow-scroll > div{min-width:900px !important}
+    .attr-footer{grid-template-columns:1fr}
+    .attr-footer > div{padding:16px}
+    .attr-footer .v{font-size:22px}
+
+    /* — Baseline / 5× multiplier — center column first — */
+    .lift{padding:24px 18px}
+    .lift-grid{grid-template-columns:1fr;gap:26px}
+    .lift-col.center{order:-1}
+    .multiplier{font-size:120px;line-height:0.9}
+    .multiplier .x{font-size:54px}
+    .multiplier-label{font-size:9.5px}
+    .lift-col .row{font-size:11px;padding:10px 0}
+    .lift-col .row .v{font-size:13px}
+
+    /* — Momentum — */
+    .mom{grid-template-columns:1fr}
+    .mom > div{padding:22px 18px;min-height:160px}
+    .mom .v{font-size:40px}
+    .mom .asset .v{font-size:30px}
+    .mom .asset .d{font-size:14px}
+
+    /* — Footer — */
+    .footer{margin-top:60px;padding:24px 0 16px;flex-direction:column;align-items:flex-start;gap:8px;font-size:9px}
+
+    /* Disable large ambient effects that only look good at 1440px */
+    .trophies::after{display:none}
+    body::before{background-size:40px 40px}
+  }
+
+  /* ====================================================================
+     RESPONSIVE · SMALL MOBILE  ≤ 420px
+     Further tighten, reserve line for hero number.
+     ==================================================================== */
+  @media (max-width: 420px){
+    .page{padding:0 14px 56px}
+    .hero h1{font-size:46px}
+    .hero .sub{font-size:14px}
+    .sec-head h2{font-size:22px}
+    .trophies{grid-template-columns:1fr}
+    .trophy{min-height:130px}
+    .trophy .num{font-size:36px}
+    .email-hero .big{font-size:72px}
+    .email-hero .big .pct{font-size:36px}
+    .multiplier{font-size:100px}
+    .multiplier .x{font-size:44px}
+    #tlStage{height:320px !important}
+    .tl-evt{width:78px}
+    .tl-evt .ttl{font-size:11px}
+    .tl-evt .tag{font-size:7px}
+    .geo-stage.merged > canvas, .geo-stage.merged > svg{height:260px !important}
+    .prod-row{padding:12px 14px}
+    .prod-row .nm{font-size:15px}
+    .prod-row.hero .nm{font-size:19px}
+  }
+
+  /* Ensure text remains selectable and tappable */
+  @media (hover:none){
+    .trophy:hover, .creative-row:hover, .er-row:hover, .pl-row:hover{background:var(--bg-1);transform:none;padding-left:0}
+  }
+</style>
+</head>
+<body>
+<div class="page" data-screen-label="Dashboard">
+
+<!-- ========== TOPBAR ========== -->
+<div class="topbar">
+  <div class="logo"><img src="assets/brawn-fox-logo.svg" alt="Brawn & Fox" class="logo" style="height:22px;display:block"></div>
+  <div class="meta">
+    <span><span class="dot"></span>Report — Final</span>
+    <span class="sep"></span>
+    <span class="crumb">Campaigns / Georgia Collection</span>
+    <span class="sep"></span>
+    <span>Rev. 01 · Apr 14, 2026</span>
+  </div>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero" data-screen-label="01 Hero">
+  <div class="scanline"></div>
+  <div class="eyebrow fade d1"><span class="bar"></span><span>Campaign Report · Spring 2026</span></div>
+  <h1 class="fade d2"><span class="w">Georgia</span><br><span class="w">Collection<em>.</em></span></h1>
+  <p class="sub fade d3 reveal-up">Campaign Performance — a fifteen-day integrated flight across Meta and Klaviyo.</p>
+  <div class="hero-grid stagger">
+    <div>
+      <div class="k">Date Range</div>
+      <div class="v">Mar 24 <span class="dim">——</span> Apr 13, 2026</div>
+    </div>
+    <div>
+      <div class="k">Duration</div>
+      <div class="v">15 days</div>
+    </div>
+    <div>
+      <div class="k">Channels</div>
+      <div class="v">Meta · Klaviyo</div>
+    </div>
+    <div>
+      <div class="k">Status</div>
+      <div class="v" style="color:var(--accent-2)">◉ Delivered Profitably</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 03 HEADLINE METRICS ========== -->
+<div class="sec-head reveal-up" data-screen-label="02 Headline Metrics">
+  <div>
+    <div class="id">§ 01 · Headline</div>
+    <h2>The trophies.</h2>
+  </div>
+  <div class="note">Six numbers that carry the weight of the campaign.</div>
+</div>
+
+<div class="trophies stagger">
+  <div class="trophy accent">
+    <span class="tick">01</span>
+    <div class="label">Campaign Revenue</div>
+    <div>
+      <div class="num"><span class="pre">$</span>6,813<span class="suf">.84</span></div>
+      <div class="sub">Across 15 days of flight</div>
+    </div>
+  </div>
+  <div class="trophy">
+    <span class="tick">02</span>
+    <div class="label">Total Orders</div>
+    <div>
+      <div class="num">150</div>
+      <div class="sub">10 per day · 5× baseline</div>
+    </div>
+  </div>
+  <div class="trophy">
+    <span class="tick">03</span>
+    <div class="label">Average Order Value</div>
+    <div>
+      <div class="num"><span class="pre">$</span>45<span class="suf">.43</span></div>
+      <div class="sub">Mixed carts lifted to $70.40</div>
+    </div>
+  </div>
+  <div class="trophy">
+    <span class="tick">04</span>
+    <div class="label">New Customers</div>
+    <div>
+      <div class="num">124</div>
+      <div class="sub">82.7% of all buyers</div>
+    </div>
+  </div>
+  <div class="trophy">
+    <span class="tick">05</span>
+    <div class="label">Meta Ad Spend</div>
+    <div>
+      <div class="num"><span class="pre">$</span>1,150<span class="suf">.36</span></div>
+      <div class="sub">Scaled $50 → $100/day</div>
+    </div>
+  </div>
+  <div class="trophy accent">
+    <span class="tick">06</span>
+    <div class="label">True ROAS</div>
+    <div>
+      <div class="num shimmer">2.6<span class="suf">×</span></div>
+      <div class="sub">Pixel-reported 2.18× · full attribution</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 02 TIMELINE ========== -->
+<div class="sec-head reveal-up" data-screen-label="03 Timeline">
+  <div>
+    <div class="id">§ 02 · Arc</div>
+    <h2>The fifteen-day flight.</h2>
+    <div class="sec-sub">A launch email lit the fuse; ads joined six days later and found their groove in Week 2.</div>
+  </div>
+  <div class="note">Mar 24 → Apr 13 · 2026</div>
+</div>
+
+<div class="timeline-card reveal-up" id="tlCard" style="overflow:hidden">
+  <span class="crosshair tl"></span><span class="crosshair tr"></span>
+  <span class="crosshair bl"></span><span class="crosshair br"></span>
+
+  <!-- Playhead readout: current day / orders / spend scrub -->
+  <div id="tlReadout" style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:0.15em;text-transform:uppercase">
+    <div>
+      <div style="color:var(--accent);font-size:10px;letter-spacing:0.25em">▸ LIVE PLAYBACK</div>
+      <div id="tlDay" style="font-family:var(--serif);font-size:36px;font-weight:300;color:var(--ink);text-transform:none;letter-spacing:-0.02em;margin-top:4px;line-height:1">Day 01 · Mar 24</div>
+    </div>
+    <div style="display:flex;gap:32px">
+      <div><div style="color:var(--ink-4);font-size:9px">Orders / Day</div><div id="tlOrd" style="font-family:var(--serif);font-size:28px;color:var(--accent-2);font-weight:300;letter-spacing:-0.02em">—</div></div>
+      <div><div style="color:var(--ink-4);font-size:9px">Cumulative</div><div id="tlCum" style="font-family:var(--serif);font-size:28px;color:var(--ink);font-weight:300;letter-spacing:-0.02em">—</div></div>
+      <div><div style="color:var(--ink-4);font-size:9px;letter-spacing:0.15em">Phase</div><div id="tlPh" style="font-family:var(--mono);font-size:12px;color:var(--accent);margin-top:8px">PRE-LAUNCH</div></div>
+    </div>
+  </div>
+
+  <div class="timeline" id="tlStage" style="height:440px;position:relative">
+    <!-- Canvas layer: particle flow + curve + rays -->
+    <canvas id="tlCanvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"></canvas>
+
+    <!-- orbital ring grid behind -->
+    <svg id="tlBg" viewBox="0 0 1200 440" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.35">
+      <defs>
+        <linearGradient id="tlGridFade" x1="0" x2="1">
+          <stop offset="0" stop-color="rgba(255,255,255,0)"/>
+          <stop offset=".15" stop-color="rgba(255,255,255,.15)"/>
+          <stop offset=".85" stop-color="rgba(255,255,255,.15)"/>
+          <stop offset="1" stop-color="rgba(255,255,255,0)"/>
+        </linearGradient>
+      </defs>
+      <g stroke="url(#tlGridFade)" stroke-width=".5">
+        <line x1="0" y1="200" x2="1200" y2="200"/>
+        <line x1="0" y1="260" x2="1200" y2="260"/>
+        <line x1="0" y1="320" x2="1200" y2="320"/>
+      </g>
+    </svg>
+
+    <!-- Day hash marks (15 days) -->
+    <div id="tlHashes" style="position:absolute;left:0;right:0;top:372px;height:28px;pointer-events:none"></div>
+
+    <!-- Main axis -->
+    <div class="timeline-axis" id="tlAxis" style="position:absolute;left:0;right:0;top:370px;margin:0"></div>
+
+    <!-- Playhead vertical beam -->
+    <div id="tlPlayhead" style="position:absolute;top:175px;bottom:70px;width:1px;left:0;pointer-events:none;z-index:5">
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom, transparent, oklch(0.86 0.09 85 / 0.9) 10%, oklch(0.86 0.09 85 / 0.9) 90%, transparent);box-shadow:0 0 24px oklch(0.86 0.09 85 / 0.6)"></div>
+      <div style="position:absolute;bottom:0;left:-5px;width:11px;height:11px;border-radius:50%;background:oklch(0.96 0.06 90);box-shadow:0 0 20px oklch(0.86 0.09 85 / 0.9), 0 0 40px oklch(0.78 0.11 75 / 0.6);transform:translateY(5px)"></div>
+    </div>
+
+    <!-- event nodes positioned as percentages across 15 days -->
+    <div id="tlNodes" style="position:absolute;inset:0;pointer-events:none">
+      <div class="tl-evt" data-day="0" data-color="accent">
+        <div class="tag">MAR 24</div>
+        <div class="ttl">Launch Day</div>
+        <div class="sub">Email to full list</div>
+      </div>
+      <div class="tl-evt" data-day="6" data-color="accent">
+        <div class="tag">MAR 30</div>
+        <div class="ttl">Meta Live</div>
+        <div class="sub">3 carousels · $50/day</div>
+      </div>
+      <div class="tl-evt" data-day="11" data-color="accent">
+        <div class="tag">APR 04</div>
+        <div class="ttl">Selling Fast</div>
+        <div class="sub">Mid-flight push</div>
+      </div>
+      <div class="tl-evt" data-day="13" data-color="accent-bright">
+        <div class="tag">APR 06</div>
+        <div class="ttl">Budget 2×</div>
+        <div class="sub">$50 → $100/day</div>
+      </div>
+      <div class="tl-evt" data-day="20" data-color="accent">
+        <div class="tag">APR 13</div>
+        <div class="ttl">Flight Closed</div>
+        <div class="sub">Targets cleared</div>
+      </div>
+    </div>
+
+    <!-- Phase bands (below axis) -->
+    <div id="tlPhases" style="position:absolute;left:0;right:0;top:402px;height:22px;pointer-events:none;font-family:var(--mono);font-size:9px;color:var(--ink-3);letter-spacing:0.18em"></div>
+  </div>
+
+  <!-- Weeks -->
+  <div class="weeks stagger">
+    <div class="week">
+      <div class="h"><span class="ph">Week 1 · Warm-up</span><span class="range">Mar 30 — Apr 5</span></div>
+      <div class="stat"><span class="k">Spend</span><span class="v">$424.70</span></div>
+      <div class="stat"><span class="k">Impressions</span><span class="v">30,514</span></div>
+      <div class="stat"><span class="k">Purchases</span><span class="v">19</span></div>
+      <div class="roas">1.77<span class="u">× ROAS</span></div>
+      <div class="bar"><i style="width:49%"></i></div>
+    </div>
+    <div class="week">
+      <div class="h"><span class="ph">Week 2 · Groove</span><span class="range">Apr 6 — Apr 12</span></div>
+      <div class="stat"><span class="k">Spend</span><span class="v">$691.84</span></div>
+      <div class="stat"><span class="k">Impressions</span><span class="v">50,428</span></div>
+      <div class="stat"><span class="k">Purchases</span><span class="v">41</span></div>
+      <div class="roas">2.42<span class="u">× ROAS</span></div>
+      <div class="bar"><i style="width:78%"></i></div>
+    </div>
+    <div class="week">
+      <div class="h"><span class="ph">Final day · Close</span><span class="range">Apr 13</span></div>
+      <div class="stat"><span class="k">Spend</span><span class="v">$33.82</span></div>
+      <div class="stat"><span class="k">Impressions</span><span class="v">2,584</span></div>
+      <div class="stat"><span class="k">Purchases</span><span class="v">1</span></div>
+      <div class="roas">2.54<span class="u">× ROAS</span></div>
+      <div class="bar"><i style="width:82%"></i></div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 04 META ADS ========== -->
+<div class="sec-head reveal-up" data-screen-label="04 Meta Ads">
+  <div>
+    <div class="id">§ 03 · Meta</div>
+    <h2>Two placements, two jobs.</h2>
+    <div class="sec-sub">The algorithm concentrated spend on the winning creatives. Facebook ran lean; Instagram ran wide.</div>
+  </div>
+  <div class="note">83,526 impressions · 61 purchases</div>
+</div>
+
+<div class="panel reveal-up">
+  <div class="h">
+    <div class="t">Creative performance</div>
+    <div class="n">3 Carousels · Per-ad breakdown</div>
+  </div>
+
+  <div class="creative-row">
+    <div class="name">
+      <span class="tag">01</span>
+      <span class="tl">The Drop — Carousel <em>— winner</em></span>
+    </div>
+    <div class="cell"><span class="k">Spend</span>$571.16</div>
+    <div class="cell"><span class="k">Impressions</span>44,967</div>
+    <div class="cell"><span class="k">Purchases</span>36</div>
+    <div class="cell winner"><span class="k">ROAS</span>2.82×
+      <div class="mini-bar"><i style="width:100%"></i></div>
+    </div>
+  </div>
+  <div class="creative-row">
+    <div class="name">
+      <span class="tag">02</span>
+      <span class="tl">Construction — Carousel</span>
+    </div>
+    <div class="cell"><span class="k">Spend</span>$565.19</div>
+    <div class="cell"><span class="k">Impressions</span>37,738</div>
+    <div class="cell"><span class="k">Purchases</span>25</div>
+    <div class="cell"><span class="k">ROAS</span>1.60×
+      <div class="mini-bar"><i style="width:57%"></i></div>
+    </div>
+  </div>
+  <div class="creative-row">
+    <div class="name">
+      <span class="tag">03</span>
+      <span class="tl">Spring Golf — Carousel</span>
+    </div>
+    <div class="cell"><span class="k">Spend</span>$14.01</div>
+    <div class="cell"><span class="k">Impressions</span>821</div>
+    <div class="cell"><span class="k">Purchases</span>0</div>
+    <div class="cell" style="color:var(--ink-3)"><span class="k">Status</span>Spend concentrated<br>on winners</div>
+  </div>
+</div>
+
+<!-- split placement + reach -->
+<div style="margin-top:24px" class="reveal-up">
+  <div class="panel" style="padding:0">
+    <div class="h" style="padding:24px 32px 16px;margin-bottom:0">
+      <div class="t">Placement split — efficiency vs. scale</div>
+      <div class="n">Facebook vs. Instagram</div>
+    </div>
+    <div class="split" style="border:0;border-top:1px solid var(--line)">
+      <div>
+        <div class="role">The Efficiency Channel</div>
+        <div class="ch">Facebook</div>
+        <div class="row"><span class="k">Spend share</span><span class="v">$231.07 · 20%</span></div>
+        <div class="row"><span class="k">Purchases</span><span class="v">15</span></div>
+        <div class="row"><span class="k">ROAS</span><span class="v" style="color:var(--accent-2)">2.84×</span></div>
+        <div class="row"><span class="k">Cost per purchase</span><span class="v" style="color:var(--accent-2)">$15.40</span></div>
+        <div class="pct"><i style="width:20%"></i><span>20% SPEND</span></div>
+      </div>
+      <div>
+        <div class="role">The Scale Channel</div>
+        <div class="ch">Instagram</div>
+        <div class="row"><span class="k">Spend share</span><span class="v">$919.29 · 80%</span></div>
+        <div class="row"><span class="k">Purchases</span><span class="v">46</span></div>
+        <div class="row"><span class="k">ROAS</span><span class="v">2.02×</span></div>
+        <div class="row"><span class="k">Cost per purchase</span><span class="v">$19.98</span></div>
+        <div class="pct"><i style="width:80%"></i><span>80% SPEND</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reach-grid stagger">
+    <div><div class="k">Unique Reach</div><div class="v">40,376</div></div>
+    <div><div class="k">Impressions</div><div class="v">83,526</div></div>
+    <div><div class="k">Avg. Frequency</div><div class="v">2.07</div></div>
+    <div><div class="k">Add-to-Carts</div><div class="v">205</div></div>
+  </div>
+</div>
+
+<!-- ========== 05 EMAIL ========== -->
+<div class="sec-head reveal-up" data-screen-label="05 Email">
+  <div>
+    <div class="id">§ 04 · Klaviyo</div>
+    <h2>Inboxes opened <em style="font-style:italic;color:var(--accent-2)">twice</em> the benchmark.</h2>
+    <div class="sec-sub">Three sends. 7,882 opens. A 58% open rate against a 25–35% DTC apparel standard.</div>
+  </div>
+  <div class="note">$1,290.52 email revenue · 25 conversions</div>
+</div>
+
+<div class="email-hero reveal-scale">
+  <div class="lbl">Campaign-wide open rate</div>
+  <div class="big">58<span class="pct">%</span></div>
+  <div class="cap">More than double the DTC apparel benchmark. Every send landed on a hungry list.</div>
+
+  <div class="bench">
+    <span style="font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.18em;text-transform:uppercase">Benchmark</span>
+    <div class="track">
+      <div class="industry" style="width:30%"></div>
+      <div class="marker" style="left:30%"><div class="lab">Industry ceiling · 30%</div></div>
+      <div class="us" style="width:58%;opacity:0.9;mix-blend-mode:screen"></div>
+      <div class="marker" style="left:58%;background:var(--accent-2)"><div class="lab" style="color:var(--accent-2)">Brawn & Fox · 58%</div></div>
+    </div>
+    <span class="val">+28 pts</span>
+  </div>
+</div>
+
+<div class="email-rows reveal-up">
+  <div class="er-head">
+    <div>Send</div>
+    <div>Recipients</div>
+    <div>Opens</div>
+    <div>Open Rate</div>
+    <div>Clicks</div>
+    <div>Orders</div>
+    <div style="text-align:right">Revenue</div>
+  </div>
+  <div class="er-row">
+    <div class="name">Launch Day <span style="font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.1em">· Mar 24 · combined</span></div>
+    <div>~4,255</div>
+    <div>5,362</div>
+    <div class="open">~58.0%</div>
+    <div>357</div>
+    <div>15</div>
+    <div style="text-align:right">$700.40</div>
+  </div>
+  <div class="er-row">
+    <div class="name">Selling Fast <span style="font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.1em">· Apr 04</span></div>
+    <div>4,362</div>
+    <div>2,520</div>
+    <div class="open">57.8%</div>
+    <div>105</div>
+    <div>10</div>
+    <div style="text-align:right">$590.12</div>
+  </div>
+  <div class="er-row">
+    <div class="name" style="color:var(--accent-2)">Total · campaign</div>
+    <div>—</div>
+    <div style="color:var(--accent-2)">7,882</div>
+    <div class="open">—</div>
+    <div>462</div>
+    <div>25</div>
+    <div style="text-align:right;color:var(--accent-2)">$1,290.52</div>
+  </div>
+</div>
+
+<!-- ========== 06 PRODUCTS ========== -->
+<div class="sec-head reveal-up" data-screen-label="06 Products">
+  <div>
+    <div class="id">§ 05 · Mix</div>
+    <h2>Azalea White, runaway.</h2>
+    <div class="sec-sub">One SKU accounted for 59% of all Georgia units sold — and the collection pulled shoppers into the wider catalog.</div>
+  </div>
+  <div class="note">Units sold · Georgia Collection</div>
+</div>
+
+<div class="prod-wrap stagger" id="prodWrap">
+  <div class="prod-head">
+    <div>
+      <div class="ph-title">Georgia Collection · SKU Performance</div>
+      <div class="ph-sub">109 units shipped across 9 SKUs — one ran away with the drop.</div>
+    </div>
+    <div class="ph-stat">
+      Top SKU Share
+      <b style="color:var(--accent-2)">59%</b>
+    </div>
+    <div class="ph-stat">
+      Lead over #2
+      <b>+29pp</b>
+    </div>
+  </div>
+
+  <div class="tele">
+    <span>◉ LIVE · SKU TELEMETRY</span>
+    <span>◦ SAMPLING 109u</span>
+    <span>◦ WIN RATIO 2.0×</span>
+    <span>◦ Δ +29pp</span>
+  </div>
+
+  <div class="prod-leader">
+    <div>Rank</div>
+    <div>Product</div>
+    <div style="text-align:right">Units</div>
+    <div style="text-align:right">Share</div>
+    <div class="bar-ticks"><span>0%</span><span style="float:right">60%</span></div>
+  </div>
+
+  <div class="prod-row hero" data-fill="100">
+    <div class="rk">01</div>
+    <div>
+      <div class="nm">Azalea <em>White</em></div>
+      <div class="sku">SKU · AZL-WHT-24</div>
+    </div>
+    <div class="un" data-target="64">0<span class="u">u</span></div>
+    <div class="pct hero" data-target="59">0%</div>
+    <div class="bar-cell"><div class="track"></div><div class="fill" data-w="100"><span class="shimmer"></span></div><span class="particle"></span></div>
+    <span class="trail"></span>
+  </div>
+
+  <div class="prod-row" data-fill="51">
+    <div class="rk">02</div>
+    <div>
+      <div class="nm">Peach Sky</div>
+      <div class="sku">SKU · PCH-SKY-18</div>
+    </div>
+    <div class="un" data-target="33">0<span class="u">u</span></div>
+    <div class="pct" data-target="30">0%</div>
+    <div class="bar-cell"><div class="track"></div><div class="fill" data-w="51"><span class="shimmer"></span></div></div>
+  </div>
+
+  <div class="prod-row" data-fill="15">
+    <div class="rk">03</div>
+    <div>
+      <div class="nm">Peach Camo</div>
+      <div class="sku">SKU · PCH-CAM-12</div>
+    </div>
+    <div class="un" data-target="10">0<span class="u">u</span></div>
+    <div class="pct" data-target="9">0%</div>
+    <div class="bar-cell"><div class="track"></div><div class="fill" data-w="15"><span class="shimmer"></span></div></div>
+  </div>
+
+  <div class="prod-row" data-fill="14">
+    <div class="rk">04</div>
+    <div>
+      <div class="nm">Peach Rope</div>
+      <div class="sku">SKU · PCH-RPE-09</div>
+    </div>
+    <div class="un" data-target="9">0<span class="u">u</span></div>
+    <div class="pct" data-target="8">0%</div>
+    <div class="bar-cell"><div class="track"></div><div class="fill" data-w="14"><span class="shimmer"></span></div></div>
+  </div>
+
+  <div class="prod-row" data-fill="11">
+    <div class="rk">05</div>
+    <div>
+      <div class="nm">Outline — warm camo</div>
+      <div class="sku">SKU · OUT-WCM-07</div>
+    </div>
+    <div class="un" data-target="7">0<span class="u">u</span></div>
+    <div class="pct" data-target="6">0%</div>
+    <div class="bar-cell"><div class="track"></div><div class="fill" data-w="11"><span class="shimmer"></span></div></div>
+  </div>
+
+  <div class="prod-row" data-fill="11">
+    <div class="rk">06</div>
+    <div>
+      <div class="nm">Outline — warm slate</div>
+      <div class="sku">SKU · OUT-WSL-07</div>
+    </div>
+    <div class="un" data-target="7">0<span class="u">u</span></div>
+    <div class="pct" data-target="6">0%</div>
+    <div class="bar-cell"><div class="track"></div><div class="fill" data-w="11"><span class="shimmer"></span></div></div>
+  </div>
+
+  <div class="prod-row" data-fill="8">
+    <div class="rk">07</div>
+    <div>
+      <div class="nm">Azalea — warm slate</div>
+      <div class="sku">SKU · AZL-WSL-05</div>
+    </div>
+    <div class="un" data-target="5">0<span class="u">u</span></div>
+    <div class="pct" data-target="5">0%</div>
+    <div class="bar-cell"><div class="track"></div><div class="fill" data-w="8"><span class="shimmer"></span></div></div>
+  </div>
+
+  <div class="prod-row" data-fill="8">
+    <div class="rk">08</div>
+    <div>
+      <div class="nm">Azalea Camo</div>
+      <div class="sku">SKU · AZL-CAM-05</div>
+    </div>
+    <div class="un" data-target="5">0<span class="u">u</span></div>
+    <div class="pct" data-target="5">0%</div>
+    <div class="bar-cell"><div class="track"></div><div class="fill" data-w="8"><span class="shimmer"></span></div></div>
+  </div>
+
+  <div class="prod-row" data-fill="2">
+    <div class="rk">09</div>
+    <div>
+      <div class="nm">Azalea Tee</div>
+      <div class="sku">SKU · AZL-TEE-01</div>
+    </div>
+    <div class="un" data-target="1">0<span class="u">u</span></div>
+    <div class="pct" data-target="1">0%</div>
+    <div class="bar-cell"><div class="track"></div><div class="fill" data-w="2"><span class="shimmer"></span></div></div>
+  </div>
+
+  <div class="prod-foot-note">
+    <div class="ft-insight">One SKU carried 59% of Georgia units — a clear leader, a soft tail.</div>
+    <div>Units of 109 · 15 days</div>
+  </div>
+</div>
+
+<div style="display:none" id="prodStage">
+  <!-- Status rail -->
+  <div class="prod-top">
+    <div class="pt-id"><span class="pip"></span><span>GEORGIA · SKU ASCENSION ∙ LIVE</span></div>
+    <div class="pt-mid">
+      <span><span class="cl">UNITS</span> <span class="vl">141</span></span>
+      <span><span class="cl">SKUS</span> <span class="vl">09</span></span>
+      <span><span class="cl">LEADER</span> <span class="vl">AZL-WHT</span></span>
+      <span><span class="cl">GAP TO #02</span> <span class="vl">+29%</span></span>
+    </div>
+    <div class="pt-r"><span class="pulse"></span><span>TELEMETRY · OPERATIONAL</span></div>
+  </div>
+
+  <!-- Breakout / left panel -->
+  <div class="prod-breakout">
+    <div>
+      <div class="brk-tag">Breakout · Sector 01</div>
+      <div class="brk-sku">SKU · AZL-WHT-24</div>
+      <div class="brk-name">Azalea<em>White.</em></div>
+      <div class="brk-line"></div>
+      <div class="brk-desc">"One hat carried the collection. Fifty-nine percent of every Georgia unit shipped wore this dye — a single SKU bending the gravity of demand."</div>
+      <div class="brk-meters">
+        <div class="m hero"><div class="k">Share</div><div class="v">59%</div></div>
+        <div class="m"><div class="k">Units</div><div class="v">64</div></div>
+        <div class="m"><div class="k">Rank</div><div class="v">01</div></div>
+        <div class="m"><div class="k">Lead</div><div class="v">+29%</div></div>
+      </div>
+    </div>
+    <div class="brk-signature">Ascension Bloom · Azimuth 00° · Revolution 01</div>
+  </div>
+
+  <!-- Bloom canvas + SVG + labels -->
+  <div class="prod-bloom" id="prodBloom">
+    <canvas id="prodCanvas"></canvas>
+    <svg class="prod-svg" id="prodSvg" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid meet"></svg>
+
+    <!-- Core readout -->
+    <div class="bloom-core" id="prodCore" style="left:50%;top:50%">
+      <div class="c1">Georgia Collection</div>
+      <div class="c2">109</div>
+      <div class="c3">Units Shipped · 15d</div>
+      <div class="c4">◇ Σ RANK-WEIGHTED · AZIMUTHAL</div>
+    </div>
+  </div>
+
+  <!-- Manifest ticker -->
+  <div class="prod-foot">
+    <div class="lbl">▸ MANIFEST</div>
+    <div class="scroll"><div class="scroll-inner">
+      <span class="sku">AZL-WHT-24</span><span class="num">64u · 59%</span>
+      <span class="dot">◇</span>
+      <span class="sku">PCH-SKY-18</span><span class="num">33u · 30%</span>
+      <span class="dot">◇</span>
+      <span class="sku">PCH-CAM-12</span><span class="num">10u · 9%</span>
+      <span class="dot">◇</span>
+      <span class="sku">PCH-RPE-09</span><span class="num">9u · 8%</span>
+      <span class="dot">◇</span>
+      <span class="sku">OUT-WCM-07</span><span class="num">7u · 6%</span>
+      <span class="dot">◇</span>
+      <span class="sku">OUT-WSL-07</span><span class="num">7u · 6%</span>
+      <span class="dot">◇</span>
+      <span class="sku">AZL-WSL-05</span><span class="num">5u · 5%</span>
+      <span class="dot">◇</span>
+      <span class="sku">AZL-CAM-05</span><span class="num">5u · 5%</span>
+      <span class="dot">◇</span>
+      <span class="sku">AZL-TEE-01</span><span class="num">1u · 1%</span>
+      <span class="dot">◇</span>
+      <!-- duplicate for seamless -->
+      <span class="sku">AZL-WHT-24</span><span class="num">64u · 59%</span>
+      <span class="dot">◇</span>
+      <span class="sku">PCH-SKY-18</span><span class="num">33u · 30%</span>
+      <span class="dot">◇</span>
+      <span class="sku">PCH-CAM-12</span><span class="num">10u · 9%</span>
+      <span class="dot">◇</span>
+      <span class="sku">PCH-RPE-09</span><span class="num">9u · 8%</span>
+      <span class="dot">◇</span>
+      <span class="sku">OUT-WCM-07</span><span class="num">7u · 6%</span>
+      <span class="dot">◇</span>
+      <span class="sku">OUT-WSL-07</span><span class="num">7u · 6%</span>
+      <span class="dot">◇</span>
+      <span class="sku">AZL-WSL-05</span><span class="num">5u · 5%</span>
+      <span class="dot">◇</span>
+      <span class="sku">AZL-CAM-05</span><span class="num">5u · 5%</span>
+      <span class="dot">◇</span>
+      <span class="sku">AZL-TEE-01</span><span class="num">1u · 1%</span>
+      <span class="dot">◇</span>
+    </div></div>
+    <div class="clock" id="prodClock">T+14:58:22</div>
+  </div>
+</div>
+
+<div class="mixed stagger">
+  <div>
+    <div class="t">Georgia-only carts</div>
+    <div class="aov">$42.91</div>
+    <div class="ord">102 orders · baseline AOV</div>
+  </div>
+  <div class="winner">
+    <div class="t">Mixed carts · Georgia + catalog</div>
+    <div class="aov">$70.40</div>
+    <div class="ord">12 orders · pulled into wider range</div>
+  </div>
+  <div>
+    <div class="t">Non-Georgia carts</div>
+    <div class="aov">$44.22</div>
+    <div class="ord">36 orders · steady baseline</div>
+  </div>
+</div>
+
+<!-- ========== 07 ACQUISITION ========== -->
+<div class="sec-head reveal-up" data-screen-label="07 Acquisition">
+  <div>
+    <div class="id">§ 06 · Acquisition</div>
+    <h2>A customer-acquisition engine.</h2>
+    <div class="sec-sub">Eighty-three percent of buyers were meeting the brand for the first time.</div>
+  </div>
+  <div class="note">150 total buyers in window</div>
+</div>
+
+<div class="acq stagger">
+  <div class="acq-ring">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="var(--bg-3)" stroke-width="18"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="url(#accentGrad)" stroke-width="18"
+          stroke-dasharray="415.48 502.65" stroke-linecap="butt"/>
+        <defs>
+          <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="oklch(0.78 0.11 75)"/>
+            <stop offset="100%" stop-color="oklch(0.86 0.09 85)"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="ring-center">
+        <div class="n">83<span style="font-size:48px;color:var(--accent)">%</span></div>
+        <div class="l">New Buyers</div>
+      </div>
+    </div>
+    <div class="acq-legend">
+      <div class="li">
+        <div class="k">New Customers</div>
+        <div class="v">124</div>
+        <div style="font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:4px;letter-spacing:0.08em">82.7% of buyers</div>
+      </div>
+      <div class="li dim">
+        <div class="k">Returning</div>
+        <div class="v">26</div>
+        <div style="font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:4px;letter-spacing:0.08em">17.3% of buyers</div>
+      </div>
+      <div class="li dim" style="border-left-color:var(--accent-dim)">
+        <div class="k">Total Buyers</div>
+        <div class="v">150</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="padding:32px">
+    <div class="h">
+      <div class="t">What the window delivered</div>
+      <div class="n">Brand-level</div>
+    </div>
+    <div style="display:grid;grid-template-rows:1fr 1fr;gap:18px;height:calc(100% - 60px)">
+      <div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.2em;text-transform:uppercase">New relationships earned</div>
+        <div style="font-family:var(--serif);font-size:44px;font-weight:300;color:var(--ink);letter-spacing:-0.02em;margin-top:6px">124 first-time buyers</div>
+        <div style="font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink-2);margin-top:8px">Each one now a candidate for a second purchase — and on file for every future collection.</div>
+      </div>
+      <div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.2em;text-transform:uppercase">Returning loyalists</div>
+        <div style="font-family:var(--serif);font-size:44px;font-weight:300;color:var(--ink);letter-spacing:-0.02em;margin-top:6px">26 repeat buyers</div>
+        <div style="font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink-2);margin-top:8px">Confirmed the collection resonated with the existing community.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 08 GEOGRAPHY ========== -->
+<div class="sec-head reveal-up" data-screen-label="08 Geography">
+  <div>
+    <div class="id">§ 07 · Geography</div>
+    <h2>Home-state pull.</h2>
+    <div class="sec-sub">Georgia alone took 34% of orders. Southern states secured more than half of everything shipped.</div>
+  </div>
+  <div class="note">26 states · 150 orders</div>
+</div>
+
+<div class="geo-layout stagger">
+  <div class="geo-viz" id="geoPanel">
+    <!-- Corner brackets -->
+    <span class="crosshair tl"></span><span class="crosshair tr"></span>
+    <span class="crosshair bl"></span><span class="crosshair br"></span>
+
+    <!-- Top telemetry bar -->
+    <div class="geo-top">
+      <div class="geo-id">
+        <span class="pip"></span>
+        <span class="lbl">ORBITAL RECON · SECTOR 34.2N</span>
+      </div>
+      <div class="geo-coord">
+        <span id="geoCoord">LAT 32.1656 · LON ‒82.9001</span>
+        <span class="sep">│</span>
+        <span id="geoScan">SCAN 000°</span>
+        <span class="sep">│</span>
+        <span class="live">LIVE</span>
+      </div>
+    </div>
+
+    <div class="geo-title-row">
+      <div>
+        <div class="geo-title">Continental density map</div>
+        <div class="geo-sub">Shipment signals · Lower 48 · Weighted by orders</div>
+      </div>
+      <div class="geo-legend">
+        <div><span class="sw sw-hi"></span>≥ 20 orders</div>
+        <div><span class="sw sw-md"></span>6–19</div>
+        <div><span class="sw sw-lo"></span>1–5</div>
+      </div>
+    </div>
+
+    <!-- Stage: layered canvas + svg + overlays -->
+    <div class="geo-stage merged" id="geoStage">
+      <canvas id="geoCanvas"></canvas>
+
+      <!-- SVG wireframe layer -->
+      <svg class="geo-svg" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <radialGradient id="gaGlow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0%" stop-color="oklch(0.92 0.09 85)" stop-opacity="0.9"/>
+            <stop offset="40%" stop-color="oklch(0.78 0.11 75)" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="oklch(0.78 0.11 75)" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="glowF" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="2"/>
+            <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- Grid -->
+        <g class="geo-grid" stroke="rgba(255,255,255,0.04)" stroke-width="0.5">
+          <line x1="0" y1="120" x2="1200" y2="120"/>
+          <line x1="0" y1="280" x2="1200" y2="280"/>
+          <line x1="0" y1="440" x2="1200" y2="440"/>
+          <line x1="0" y1="600" x2="1200" y2="600"/>
+          <line x1="200" y1="0" x2="200" y2="760"/>
+          <line x1="440" y1="0" x2="440" y2="760"/>
+          <line x1="680" y1="0" x2="680" y2="760"/>
+          <line x1="920" y1="0" x2="920" y2="760"/>
+        </g>
+
+        <!-- Range rings around GA target (center now at 420, 490) -->
+        <g class="geo-rings" fill="none" stroke="oklch(0.78 0.11 75 / 0.4)" stroke-width="0.6">
+          <circle cx="420" cy="490" r="60" stroke-dasharray="2 4"/>
+          <circle cx="420" cy="490" r="130" stroke-dasharray="3 6" stroke-opacity="0.5"/>
+          <circle cx="420" cy="490" r="210" stroke-dasharray="4 10" stroke-opacity="0.3"/>
+          <circle cx="420" cy="490" r="300" stroke-dasharray="4 14" stroke-opacity="0.18"/>
+          <circle cx="420" cy="490" r="400" stroke-dasharray="6 20" stroke-opacity="0.1"/>
+        </g>
+
+        <!-- Radial tick marks around GA -->
+        <g class="geo-dial" stroke="oklch(0.78 0.11 75 / 0.5)" stroke-width="0.6">
+        </g>
+
+        <!-- US wireframe outline — scaled up & shifted left -->
+        <path id="usPath" class="geo-us"
+          d="M 60 220 L 150 180 L 240 160 L 340 144 L 460 140 L 580 148 L 660 164 L 720 196 L 748 240 L 740 320 L 720 400 L 680 480 L 600 560 L 480 600 L 360 628 L 260 632 L 180 600 L 120 560 L 80 500 L 60 420 L 50 340 L 60 260 Z"
+          fill="rgba(255,255,255,0.01)" stroke="oklch(0.86 0.09 85 / 0.35)" stroke-width="0.8"/>
+
+        <!-- Inner hairline contour -->
+        <path class="geo-us-inner"
+          d="M 180 280 L 280 260 L 400 248 L 520 256 L 620 280 L 680 340 L 670 420 L 620 500 L 500 550 L 380 560 L 280 550 L 200 520 L 140 440 L 120 360 Z"
+          fill="none" stroke="oklch(0.78 0.11 75 / 0.18)" stroke-width="0.5" stroke-dasharray="1 3"/>
+
+        <!-- Georgia target halo removed -->
+
+        <!-- Data-wire connections from GA to other state dots -->
+        <g class="geo-wires" stroke="oklch(0.86 0.09 85 / 0.35)" stroke-width="0.6" fill="none">
+          <path class="wire" d="M 420 490 Q 400 460 380 410"/>            <!-- TN -->
+          <path class="wire" d="M 420 490 Q 445 445 470 400"/>            <!-- NC -->
+          <path class="wire" d="M 420 490 Q 438 478 455 470"/>            <!-- SC -->
+          <path class="wire" d="M 420 490 Q 392 492 360 496"/>            <!-- MS -->
+          <path class="wire" d="M 420 490 Q 440 540 464 590"/>            <!-- FL -->
+          <path class="wire" d="M 420 490 Q 425 414 432 340"/>            <!-- OH -->
+          <path class="wire" d="M 420 490 Q 450 400 485 318"/>            <!-- PA -->
+          <path class="wire" d="M 420 490 Q 460 430 510 370"/>            <!-- MD -->
+          <path class="wire" d="M 420 490 Q 355 510 290 532"/>            <!-- TX -->
+        </g>
+
+        <!-- State dots + leader lines extending to right edge (into readout column) -->
+        <g class="geo-states">
+          <!-- Leader lines: from dot → horizontal to right edge (x=1196) -->
+          <g class="leaders" stroke="oklch(0.86 0.09 85 / 0.25)" stroke-width="0.5" fill="none">
+            <!-- GA — home, hero leader -->
+            <path d="M 420 490 L 560 490 L 1196 490" stroke="oklch(0.92 0.09 85 / 0.55)" stroke-width="0.8"/>
+            <!-- Others, ordered by rank so targets line up with readout rows -->
+            <path d="M 380 410 L 540 410 L 1196 410"/>            <!-- TN rank 02 -->
+            <path d="M 470 400 L 520 356 L 1196 356"/>            <!-- NC rank 03 -->
+            <path d="M 290 532 L 720 320 L 1196 320"/>            <!-- TX rank 04 -->
+            <path d="M 455 470 L 560 450 L 1196 450"/>            <!-- SC rank 05 -->
+            <path d="M 510 370 L 640 244 L 1196 244"/>            <!-- MD rank 06 -->
+            <path d="M 485 318 L 640 200 L 1196 200"/>            <!-- PA rank 07 -->
+            <path d="M 432 340 L 640 156 L 1196 156"/>            <!-- OH rank 08 -->
+            <path d="M 464 590 L 720 590 L 1196 590"/>            <!-- FL rank 09 -->
+            <path d="M 360 496 L 720 656 L 1196 656"/>            <!-- MS rank 10 -->
+          </g>
+
+          <!-- Dots on state positions -->
+          <g class="dots">
+            <g class="st home" transform="translate(420 490)">
+              <circle r="20" fill="none" stroke="oklch(0.92 0.09 85)" stroke-width="0.7" stroke-dasharray="3 3" class="pulse-ring"/>
+              <circle r="6" fill="oklch(0.96 0.06 90)" filter="url(#glowF)"/>
+            </g>
+            <circle class="st hi" cx="380" cy="410" r="4.2" fill="oklch(0.92 0.09 85)"/>
+            <circle class="st md" cx="470" cy="400" r="3.4" fill="oklch(0.88 0.08 82)"/>
+            <circle class="st md" cx="455" cy="470" r="3.4" fill="oklch(0.88 0.08 82)"/>
+            <circle class="st md" cx="510" cy="370" r="3.4" fill="oklch(0.88 0.08 82)"/>
+            <circle class="st md" cx="290" cy="532" r="3.4" fill="oklch(0.88 0.08 82)"/>
+            <circle class="st lo" cx="485" cy="318" r="3" fill="oklch(0.84 0.07 82)"/>
+            <circle class="st lo" cx="432" cy="340" r="3" fill="oklch(0.84 0.07 82)"/>
+            <circle class="st lo" cx="464" cy="590" r="3" fill="oklch(0.84 0.07 82)"/>
+            <circle class="st lo" cx="360" cy="496" r="3" fill="oklch(0.84 0.07 82)"/>
+          </g>
+
+          <!-- GA crosshair accent on map -->
+          <g stroke="oklch(0.92 0.09 85)" stroke-width="0.8" opacity="0.55">
+            <line x1="420" y1="460" x2="420" y2="468"/>
+            <line x1="420" y1="512" x2="420" y2="520"/>
+            <line x1="390" y1="490" x2="398" y2="490"/>
+            <line x1="442" y1="490" x2="450" y2="490"/>
+          </g>
+        </g>
+      </svg>
+
+      <!-- Radar sweep removed -->
+
+      <!-- Scanlines -->
+      <div class="geo-scan"></div>
+
+      <!-- Side gauges -->
+      <div class="geo-gauges">
+        <div class="gauge">
+          <div class="gk">SIGNAL</div>
+          <div class="bars"><i style="height:34%"></i><i style="height:52%"></i><i style="height:68%"></i><i style="height:78%"></i><i style="height:92%"></i><i style="height:88%"></i><i style="height:74%"></i></div>
+          <div class="gv">•••••</div>
+        </div>
+        <div class="gauge">
+          <div class="gk">CLUSTER</div>
+          <div class="gv big">SE</div>
+          <div class="gk2">55% DENSITY</div>
+        </div>
+        <div class="gauge">
+          <div class="gk">LOCK</div>
+          <div class="gv accent">GA</div>
+          <div class="gk2">PRIMARY</div>
+        </div>
+      </div>
+
+      <!-- Constellation readout — state rank list inside the stage, aligned with leader lines -->
+      <div class="geo-readout" id="geoReadout">
+        <div class="ro-head"><span>STATE · CONSTELLATION</span><span>ORDERS · REVENUE</span></div>
+        <div class="ro-row home" data-st="GA" data-orders="51" data-max="100">
+          <div class="rk">01</div><div class="nm">Georgia</div><div class="or"><span class="cnt">0</span>/51</div><div class="rv">$2,082.35</div>
+          <div class="tag">Home state · 34% of all orders</div>
+          <div class="bar"><i ></i></div>
+        </div>
+        <div class="ro-row" data-st="TN" data-orders="20" data-max="39"><div class="rk">02</div><div class="nm">Tennessee</div><div class="or"><span class="cnt">0</span>/20</div><div class="rv">$949.55</div><div class="bar"><i ></i></div></div>
+        <div class="ro-row" data-st="NC" data-orders="8" data-max="16"><div class="rk">03</div><div class="nm">North Carolina</div><div class="or"><span class="cnt">0</span>/8</div><div class="rv">$279.20</div><div class="bar"><i ></i></div></div>
+        <div class="ro-row" data-st="TX" data-orders="7" data-max="14"><div class="rk">04</div><div class="nm">Texas</div><div class="or"><span class="cnt">0</span>/7</div><div class="rv">$329.30</div><div class="bar"><i ></i></div></div>
+        <div class="ro-row" data-st="SC" data-orders="6" data-max="12"><div class="rk">05</div><div class="nm">South Carolina</div><div class="or"><span class="cnt">0</span>/6</div><div class="rv">$296.40</div><div class="bar"><i ></i></div></div>
+        <div class="ro-row" data-st="MD" data-orders="6" data-max="12"><div class="rk">06</div><div class="nm">Maryland</div><div class="or"><span class="cnt">0</span>/6</div><div class="rv">$206.40</div><div class="bar"><i ></i></div></div>
+        <div class="ro-row" data-st="PA" data-orders="5" data-max="10"><div class="rk">07</div><div class="nm">Pennsylvania</div><div class="or"><span class="cnt">0</span>/5</div><div class="rv">$315.50</div><div class="bar"><i ></i></div></div>
+        <div class="ro-row" data-st="OH" data-orders="5" data-max="10"><div class="rk">08</div><div class="nm">Ohio</div><div class="or"><span class="cnt">0</span>/5</div><div class="rv">$198.50</div><div class="bar"><i ></i></div></div>
+        <div class="ro-row" data-st="FL" data-orders="5" data-max="10"><div class="rk">09</div><div class="nm">Florida</div><div class="or"><span class="cnt">0</span>/5</div><div class="rv">$226.60</div><div class="bar"><i ></i></div></div>
+        <div class="ro-row" data-st="MS" data-orders="4" data-max="8"><div class="rk">10</div><div class="nm">Mississippi</div><div class="or"><span class="cnt">0</span>/4</div><div class="rv">$437.14</div><div class="bar"><i ></i></div></div>
+        <div class="ro-row other"><div class="rk">—</div><div class="nm">Other · 14 states</div><div class="or">33</div><div class="rv">$1,493.40</div></div>
+      </div>
+
+      <!-- Bottom readout ticker -->
+      <div class="geo-ticker">
+        <div class="tk-label">▸ LOG</div>
+        <div class="tk-scroll"><div class="tk-inner" id="geoTkInner">
+          <span>[T+14:22] GA relay acquired · 51 orders · $2,082.35</span>
+          <span class="dot">·</span>
+          <span>[T+14:23] TN cluster pulse · 20 orders</span>
+          <span class="dot">·</span>
+          <span>[T+14:24] Carolinas link stable · NC 8 · SC 6</span>
+          <span class="dot">·</span>
+          <span>[T+14:25] TX lone-star ping · 7 orders</span>
+          <span class="dot">·</span>
+          <span>[T+14:26] MS pulse logged · 4 orders · $437.14</span>
+          <span class="dot">·</span>
+          <span>[T+14:27] mid-atlantic tier · MD 6 · PA 5</span>
+          <span class="dot">·</span>
+          <span>[T+14:28] FL south beacon · 5 orders</span>
+          <span class="dot">·</span>
+          <span>[T+14:29] SE cluster resolution · 55% of all orders</span>
+          <span class="dot">·</span>
+          <span>[T+14:22] GA relay acquired · 51 orders · $2,082.35</span>
+          <span class="dot">·</span>
+          <span>[T+14:23] TN cluster pulse · 20 orders</span>
+          <span class="dot">·</span>
+          <span>[T+14:24] Carolinas link stable · NC 8 · SC 6</span>
+          <span class="dot">·</span>
+          <span>[T+14:25] TX lone-star ping · 7 orders</span>
+          <span class="dot">·</span>
+          <span>[T+14:26] MS pulse logged · 4 orders · $437.14</span>
+          <span class="dot">·</span>
+          <span>[T+14:27] mid-atlantic tier · MD 6 · PA 5</span>
+          <span class="dot">·</span>
+          <span>[T+14:28] FL south beacon · 5 orders</span>
+          <span class="dot">·</span>
+          <span>[T+14:29] SE cluster resolution · 55% of all orders</span>
+          <span class="dot">·</span>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="geo-footline">
+      <span><span class="pip"></span> GEORGIA · HOME STATE · 34% OF ALL ORDERS</span>
+      <span>SOUTHEAST CLUSTER · 55% OF ORDERS · $4,044.64 REVENUE</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ========== 09 ATTRIBUTION ========== -->
+<div class="sec-head reveal-up" data-screen-label="09 Attribution">
+  <div>
+    <div class="id">§ 08 · Attribution</div>
+    <h2>How we know what worked.</h2>
+    <div class="sec-sub">Sixteen sequential rules cross-referenced Shopify, Klaviyo, Meta pixel, and URL parameters. 73% of orders were graded with definitive confidence.</div>
+  </div>
+  <div class="note">150 orders traced · 6 sources</div>
+</div>
+
+<div class="attr-card reveal-up">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--line)">
+    <div style="font-family:var(--serif);font-size:22px;color:var(--ink)">Order → source → revenue</div>
+    <div style="font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.18em;text-transform:uppercase">Sankey-style flow</div>
+  </div>
+
+  <!-- SANKEY -->
+  <div class="flow-scroll">
+  <div style="position:relative;height:420px">
+    <svg id="sankeySvg" viewBox="0 0 1200 420" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%">
+      <defs>
+        <linearGradient id="fx1" x1="0" x2="1"><stop offset="0" stop-color="oklch(0.78 0.11 75)" stop-opacity="0.6"/><stop offset="1" stop-color="oklch(0.78 0.11 75)" stop-opacity="0.35"/></linearGradient>
+        <linearGradient id="fx2" x1="0" x2="1"><stop offset="0" stop-color="oklch(0.78 0.11 75)" stop-opacity="0.4"/><stop offset="1" stop-color="oklch(0.78 0.11 75)" stop-opacity="0.22"/></linearGradient>
+        <linearGradient id="fx3" x1="0" x2="1"><stop offset="0" stop-color="oklch(0.72 0.04 130)" stop-opacity="0.3"/><stop offset="1" stop-color="oklch(0.72 0.04 130)" stop-opacity="0.15"/></linearGradient>
+      </defs>
+
+      <!-- left: origins (traffic) -->
+      <!-- right: sources (attribution) -->
+
+      <!-- Georgia Meta ad 79 -->
+      <path d="M 300 90 C 600 90, 600 90, 900 90" stroke="url(#fx1)" data-flow="" stroke-width="88" fill="none" stroke-linecap="butt"/>
+      <!-- Georgia Klaviyo 24 -->
+      <path d="M 300 185 C 600 185, 600 210, 900 210" stroke="url(#fx1)" data-flow="" stroke-width="34" fill="none"/>
+      <!-- Other Meta 21 -->
+      <path d="M 300 255 C 600 255, 600 265, 900 265" stroke="url(#fx2)" data-flow="" stroke-width="28" fill="none"/>
+      <!-- Unknown 19 -->
+      <path d="M 300 305 C 600 305, 600 310, 900 310" stroke="url(#fx3)" data-flow="" stroke-width="24" fill="none"/>
+      <!-- Direct 5 -->
+      <path d="M 300 345 C 600 345, 600 345, 900 345" stroke="url(#fx3)" data-flow="" stroke-width="10" fill="none" opacity="0.7"/>
+      <!-- Google 2 -->
+      <path d="M 300 370 C 600 370, 600 370, 900 370" stroke="url(#fx3)" data-flow="" stroke-width="6" fill="none" opacity="0.6"/>
+
+      <!-- left endpoint bars -->
+      <g fill="oklch(0.78 0.11 75)">
+        <rect x="295" y="46" width="6" height="88" opacity="0.9"/>
+        <rect x="295" y="168" width="6" height="34" opacity="0.85"/>
+      </g>
+      <g fill="oklch(0.72 0.04 130)">
+        <rect x="295" y="241" width="6" height="28" opacity="0.7"/>
+        <rect x="295" y="293" width="6" height="24" opacity="0.5"/>
+        <rect x="295" y="340" width="6" height="10" opacity="0.5"/>
+        <rect x="295" y="367" width="6" height="6" opacity="0.4"/>
+      </g>
+      <!-- right endpoint -->
+      <rect x="899" y="46" width="6" height="88" fill="oklch(0.86 0.09 85)"/>
+      <rect x="899" y="193" width="6" height="34" fill="oklch(0.78 0.11 75)"/>
+      <rect x="899" y="251" width="6" height="28" fill="oklch(0.78 0.11 75)" opacity="0.7"/>
+      <rect x="899" y="298" width="6" height="24" fill="oklch(0.72 0.04 130)" opacity="0.6"/>
+      <rect x="899" y="340" width="6" height="10" fill="oklch(0.72 0.04 130)" opacity="0.5"/>
+      <rect x="899" y="367" width="6" height="6" fill="oklch(0.72 0.04 130)" opacity="0.4"/>
+    </svg>
+
+    <!-- left labels -->
+    <div style="position:absolute;left:0;top:0;width:290px;display:flex;flex-direction:column;gap:6px;font-family:var(--mono)">
+      <div style="padding:20px 0 4px;font-size:10px;color:var(--ink-3);letter-spacing:0.2em;text-transform:uppercase">Channels</div>
+      <div style="position:absolute;left:0;top:72px;font-size:12px;color:var(--ink)"><span style="color:var(--accent-2)">▍</span> Meta — Georgia ads</div>
+      <div style="position:absolute;left:0;top:175px;font-size:12px;color:var(--ink)"><span style="color:var(--accent)">▍</span> Klaviyo — Georgia sends</div>
+      <div style="position:absolute;left:0;top:250px;font-size:12px;color:var(--ink-2)"><span style="color:var(--sage)">▍</span> Meta — evergreen</div>
+      <div style="position:absolute;left:0;top:302px;font-size:12px;color:var(--ink-2)"><span style="color:var(--sage)">▍</span> Direct / unmatched</div>
+      <div style="position:absolute;left:0;top:340px;font-size:12px;color:var(--ink-3)"><span style="color:var(--sage)">▍</span> Direct URL</div>
+      <div style="position:absolute;left:0;top:365px;font-size:12px;color:var(--ink-3)"><span style="color:var(--sage)">▍</span> Google organic</div>
+    </div>
+
+    <!-- right labels -->
+    <div style="position:absolute;right:0;top:0;width:260px;font-family:var(--mono)">
+      <div style="padding:20px 0 4px;font-size:10px;color:var(--ink-3);letter-spacing:0.2em;text-transform:uppercase;text-align:right">Orders · Revenue · Share</div>
+      <div style="position:absolute;right:0;top:46px;text-align:right">
+        <div style="font-family:var(--serif);font-size:18px;color:var(--accent-2)">Georgia Meta ad</div>
+        <div style="font-size:11px;color:var(--ink-2);margin-top:2px">79 orders · $3,211.70 <span style="color:var(--accent-2)">· 47.1%</span></div>
+      </div>
+      <div style="position:absolute;right:0;top:185px;text-align:right">
+        <div style="font-family:var(--serif);font-size:17px;color:var(--ink)">Georgia Klaviyo</div>
+        <div style="font-size:11px;color:var(--ink-2);margin-top:2px">24 · $1,637.49 <span style="color:var(--accent-2)">· 24.0%</span></div>
+      </div>
+      <div style="position:absolute;right:0;top:245px;text-align:right">
+        <div style="font-family:var(--serif);font-size:16px;color:var(--ink-2)">Other Meta</div>
+        <div style="font-size:11px;color:var(--ink-3);margin-top:2px">21 · $858.82 · 12.6%</div>
+      </div>
+      <div style="position:absolute;right:0;top:297px;text-align:right">
+        <div style="font-family:var(--serif);font-size:15px;color:var(--ink-2)">Unknown / direct</div>
+        <div style="font-size:11px;color:var(--ink-3);margin-top:2px">19 · $866.43 · 12.7%</div>
+      </div>
+      <div style="position:absolute;right:0;top:338px;text-align:right">
+        <div style="font-family:var(--serif);font-size:14px;color:var(--ink-3)">Direct traffic</div>
+        <div style="font-size:11px;color:var(--ink-3);margin-top:2px">5 · $169.60 · 2.5%</div>
+      </div>
+      <div style="position:absolute;right:0;top:368px;text-align:right">
+        <div style="font-family:var(--serif);font-size:14px;color:var(--ink-3)">Google organic</div>
+        <div style="font-size:11px;color:var(--ink-3);margin-top:2px">2 · $69.80 · 1.0%</div>
+      </div>
+    </div>
+  </div>
+  </div><!-- /.flow-scroll -->
+
+  <div class="attr-footer">
+    <div>
+      <div class="k">Definitive Confidence</div>
+      <div class="v"><em>73.3%</em></div>
+      <div class="d">of orders traced with deterministic signals</div>
+    </div>
+    <div>
+      <div class="k">Methodology</div>
+      <div class="v">16 sequential rules</div>
+      <div class="d">Shopify · Klaviyo · Meta pixel · UTM</div>
+    </div>
+    <div>
+      <div class="k">Campaign-attributed share</div>
+      <div class="v"><em>71%</em></div>
+      <div class="d">Georgia channels delivered 71% of orders</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 10 BASELINE ========== -->
+<div class="sec-head reveal-up" data-screen-label="10 Baseline">
+  <div>
+    <div class="id">§ 09 · Lift</div>
+    <h2>Five times the baseline.</h2>
+    <div class="sec-sub">For fifteen straight days the brand ran at roughly five-times its 14-month baseline rate of orders and revenue.</div>
+  </div>
+  <div class="note">Prior 14 months vs. Georgia window</div>
+</div>
+
+<div class="lift reveal-up">
+  <div class="lift-grid">
+    <div class="lift-col">
+      <div class="k">Prior 14 months · Baseline</div>
+      <div class="row"><span>Orders</span><span class="v">793</span></div>
+      <div class="row"><span>Revenue</span><span class="v">$36,488.40</span></div>
+      <div class="row"><span>Orders / day</span><span class="v">~1.9</span></div>
+      <div class="row"><span>Revenue / day</span><span class="v">~$86</span></div>
+    </div>
+
+    <div class="lift-col center">
+      <div class="multiplier">5<span class="x">×</span></div>
+      <div class="multiplier-label">Daily Run Rate · Uplift</div>
+
+      <svg class="spark" viewBox="0 0 400 80" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="sparkGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="oklch(0.55 0.04 70)"/>
+            <stop offset="60%" stop-color="oklch(0.55 0.04 70)"/>
+            <stop offset="62%" stop-color="oklch(0.86 0.09 85)"/>
+            <stop offset="100%" stop-color="oklch(0.86 0.09 85)"/>
+          </linearGradient>
+        </defs>
+        <!-- baseline flat low -->
+        <polyline points="0,60 30,62 60,58 90,61 120,59 150,63 180,60 210,58 240,62 246,60" fill="none" stroke="oklch(0.55 0.04 70)" stroke-width="1.5"/>
+        <!-- campaign spike -->
+        <polyline points="246,60 254,30 262,18 270,22 278,15 286,20 294,14 302,19 310,12 318,22 326,15 334,20 342,16 350,24 358,18 366,15 374,22 382,28 390,40 400,42"
+          fill="none" stroke="oklch(0.86 0.09 85)" stroke-width="2"/>
+        <line x1="246" y1="0" x2="246" y2="80" stroke="oklch(0.78 0.11 75)" stroke-width="0.8" stroke-dasharray="2 3" opacity="0.7"/>
+        <text x="250" y="10" font-family="JetBrains Mono" font-size="8" fill="oklch(0.78 0.11 75)" letter-spacing="1">MAR 24</text>
+      </svg>
+      <div style="font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:0.18em;text-transform:uppercase;margin-top:10px">Daily orders — 14 months leading in → 15-day campaign window</div>
+    </div>
+
+    <div class="lift-col">
+      <div class="k" style="color:var(--accent)">Campaign window · 15 days</div>
+      <div class="row"><span>Orders</span><span class="v" style="color:var(--accent-2)">150</span></div>
+      <div class="row"><span>Revenue</span><span class="v" style="color:var(--accent-2)">$6,813.84</span></div>
+      <div class="row"><span>Orders / day</span><span class="v" style="color:var(--accent-2)">10.0</span></div>
+      <div class="row"><span>Revenue / day</span><span class="v" style="color:var(--accent-2)">~$454</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 11 MOMENTUM ========== -->
+<div class="sec-head reveal-up" data-screen-label="11 Momentum">
+  <div>
+    <div class="id">§ 10 · Momentum</div>
+    <h2>What the campaign built.</h2>
+    <div class="sec-sub">Beyond the 15-day revenue line: a warmer list, fresh follows, and the strongest retargeting asset the brand has ever held.</div>
+  </div>
+  <div class="note">Brand-level · carry-forward</div>
+</div>
+
+<div class="mom stagger">
+  <div>
+    <div>
+      <div class="k">Instagram Followers</div>
+      <div class="v">4,131</div>
+    </div>
+    <div class="d">End of window · community in place</div>
+  </div>
+  <div>
+    <div>
+      <div class="k">Facebook Follows</div>
+      <div class="v">395 <span style="color:var(--accent-2);font-size:22px">+23</span></div>
+    </div>
+    <div class="d">372 → 395 · +6.2% in 15 days</div>
+  </div>
+  <div class="asset">
+    <div>
+      <div class="k">Retargeting Asset Built</div>
+      <div class="v">~2,000<span style="font-size:20px;color:var(--ink-3);margin-left:8px;font-style:normal">warm openers</span></div>
+    </div>
+    <div class="d">Georgia email openers who haven't yet purchased — the warmest audience the brand has ever held.</div>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<div class="footer">
+  <div class="logo-sm"><img src="assets/brawn-fox-logo.svg" alt="Brawn & Fox" style="height:16px;opacity:0.6;display:block"></div>
+  <div>Campaign Report · Georgia Collection · Rev. 01</div>
+  <div>End of report · 11 / 11</div>
+</div>
+
+</div>
+
+<script>
+// ——— Animation bootstrap: IntersectionObserver-based reveals ———
+// Only activate on real user sessions — NOT during html-to-image captures (which set viewport to our body height OR load with a marker)
+(function initAnim(){
+  // Detect screenshot/headless: if the document was just loaded and the viewport is abnormally tall OR user-agent marks capture, skip.
+  const ua = (navigator.userAgent||'').toLowerCase();
+  const isHeadless = ua.includes('headlesschrome') || window.navigator.webdriver;
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(isHeadless || reduce){ return; /* leave everything in final state */ }
+
+  document.documentElement.classList.add('anim-ready');
+
+  // Fire immediately for hero (above the fold)
+  requestAnimationFrame(()=>{
+    const hero = document.querySelector('.hero');
+    if(hero) hero.classList.add('in');
+  });
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal,.reveal-up,.reveal-left,.reveal-right,.reveal-scale,.stagger,.hero,.timeline,.ring-wrap').forEach(el=>io.observe(el));
+
+  // Product leaderboard bar fills + counters + reveal animation
+  const prodIo = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const wrap = e.target;
+        wrap.classList.add('go');
+        // Fill bars — staggered, starts after row entrance
+        document.querySelectorAll('.prod-row .fill').forEach((f,i)=>{
+          const w = f.getAttribute('data-w') || '0';
+          const isHero = f.closest('.prod-row').classList.contains('hero');
+          const delay = isHero ? 700 : (700 + 180 + 60*i);
+          setTimeout(()=>{ f.style.width = w + '%'; }, delay);
+        });
+        // Count up numbers (un + pct) — synced to bar fill finish
+        document.querySelectorAll('.prod-row .un[data-target], .prod-row .pct[data-target]').forEach((el, i)=>{
+          const target = parseInt(el.dataset.target, 10);
+          const isHero = el.closest('.prod-row').classList.contains('hero');
+          const startDelay = isHero ? 900 : 1100 + i*40;
+          const dur = isHero ? 1100 : 800;
+          const hasU = el.querySelector('.u');
+          const suffix = el.classList.contains('pct') ? '%' : '';
+          const t0 = performance.now();
+          setTimeout(()=>{
+            const start = performance.now();
+            function tick(now){
+              const p = Math.min(1, (now - start)/dur);
+              const eased = 1 - Math.pow(1-p, 3);
+              const v = Math.round(target * eased);
+              if(hasU){
+                el.firstChild.nodeValue = v;
+              } else {
+                el.textContent = v + suffix;
+              }
+              if(p < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+          }, startDelay);
+        });
+        prodIo.unobserve(wrap);
+      }
+    });
+  }, { threshold: 0.2 });
+  const pw = document.getElementById('prodWrap');
+  if(pw) prodIo.observe(pw);
+
+  // Counter animation
+  function animateCount(el){
+    const target = parseFloat(el.dataset.count);
+    const decimals = parseInt(el.dataset.decimals||'0',10);
+    const prefix = el.dataset.prefix||'';
+    const suffix = el.dataset.suffix||'';
+    const dur = 1400;
+    const start = performance.now();
+    function step(now){
+      const t = Math.min(1,(now-start)/dur);
+      const eased = 1 - Math.pow(1-t, 3);
+      const v = target*eased;
+      el.textContent = prefix + v.toLocaleString('en-US', {minimumFractionDigits:decimals, maximumFractionDigits:decimals}) + suffix;
+      if(t<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  const countIo = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ animateCount(e.target); countIo.unobserve(e.target); }
+    });
+  },{threshold:0.4});
+  document.querySelectorAll('[data-count]').forEach(el=>{ el.classList.add('count-up','in'); countIo.observe(el); });
+})();
+
+// ——— Timeline v2: canvas particle flow + playhead scrub ———
+(function initTimeline(){
+  const stage = document.getElementById('tlStage');
+  const canvas = document.getElementById('tlCanvas');
+  if(!stage || !canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  // Campaign window: Mar 24 (day 0) → Apr 13 (day 20) = 21 days on this timeline
+  const DAYS = 21;
+  const dayOrders = [18,10,7,6,5,5, 9,8,10,11,8,16,12, 14,13,15,13,14,12,11, 9];
+  const dayLabels = ['Mar 24','25','26','27','28','29','30','31','Apr 01','02','03','04','05','06','07','08','09','10','11','12','Apr 13'];
+  const fullLabels = ['Mar 24','Mar 25','Mar 26','Mar 27','Mar 28','Mar 29','Mar 30','Mar 31','Apr 01','Apr 02','Apr 03','Apr 04','Apr 05','Apr 06','Apr 07','Apr 08','Apr 09','Apr 10','Apr 11','Apr 12','Apr 13'];
+  const majorDays = new Set([0,6,11,13,20]);
+
+  // Render hash marks
+  const hashes = document.getElementById('tlHashes');
+  hashes.innerHTML='';
+  for(let i=0;i<DAYS;i++){
+    const h = document.createElement('div');
+    h.className = 'tl-hash' + (majorDays.has(i)?' major':'');
+    h.style.left = ((i/(DAYS-1))*100) + '%';
+    if(i%2===0 || majorDays.has(i)){
+      const l = document.createElement('div'); l.className='lbl'; l.textContent = dayLabels[i];
+      h.appendChild(l);
+    }
+    hashes.appendChild(h);
+  }
+
+  // Position event nodes by data-day
+  document.querySelectorAll('.tl-evt').forEach(e=>{
+    const d = parseInt(e.dataset.day,10);
+    e.style.left = ((d/(DAYS-1))*100) + '%';
+    const g = document.createElement('div'); g.className='glyph'; e.appendChild(g);
+  });
+  // Stagger the Apr 04 / Apr 06 pair so cards don't collide
+  const budget = document.querySelector('.tl-evt[data-day="13"]');
+  if(budget){ budget.style.top = '88px'; }
+
+  // Phase bands
+  const phases = [
+    {name:'PRE-LAUNCH QUIET', s:-1, e:-1, dim:true},
+    {name:'EMAIL LAUNCH', s:0, e:5},
+    {name:'META LIVE · WK 1', s:6, e:12},
+    {name:'BUDGET SCALED · WK 2', s:13, e:19},
+    {name:'CLOSE', s:20, e:20},
+  ];
+  const phasesEl = document.getElementById('tlPhases');
+  phasesEl.innerHTML='';
+  phases.filter(p=>p.s>=0).forEach((p,i)=>{
+    const el = document.createElement('div'); el.className='tl-phase'; el.dataset.phase=p.name;
+    const l = (p.s/(DAYS-1))*100;
+    let w = ((p.e-p.s+1)/(DAYS-1))*100;
+    if(l + w > 100) w = 100 - l;
+    el.style.left = l + '%'; el.style.width = w + '%';
+    el.textContent = p.name;
+    phasesEl.appendChild(el);
+  });
+
+  // Canvas sizing
+  let W=0, H=0, DPR=Math.min(window.devicePixelRatio||1, 2);
+  function resize(){
+    const r = canvas.getBoundingClientRect();
+    W = r.width; H = r.height;
+    canvas.width = W*DPR; canvas.height = H*DPR;
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Particle system: particles drift along the order curve
+  const particles = [];
+  function spawnParticle(){
+    particles.push({
+      t: 0,                     // timeline progress 0-1
+      life: 0,
+      max: 2.4 + Math.random()*1.8,
+      speed: 0.12 + Math.random()*0.18,
+      size: 1 + Math.random()*2,
+      offset: (Math.random()-0.5)*20,
+      hue: Math.random()<0.3 ? 'bright' : 'normal',
+    });
+  }
+
+  // Curve helpers
+  function orderAt(t){
+    const f = t*(DAYS-1);
+    const i = Math.floor(f), frac = f-i;
+    const a = dayOrders[Math.max(0,Math.min(DAYS-1,i))];
+    const b = dayOrders[Math.max(0,Math.min(DAYS-1,i+1))];
+    return a*(1-frac) + b*frac;
+  }
+  function cumAt(t){
+    const f = t*(DAYS-1);
+    const i = Math.floor(f), frac = f-i;
+    let sum=0;
+    for(let k=0;k<=i;k++) sum += dayOrders[k];
+    sum += dayOrders[Math.min(DAYS-1,i+1)]*frac;
+    return sum;
+  }
+  const MAX_ORDERS = 20;
+  const axisY = () => 370;     // curve baseline matches .timeline-axis top:370
+  const CURVE_TOP = 180;       // curve peaks no higher than this (below event cards)
+  function curveY(t){
+    const v = orderAt(t);
+    return axisY() - (v/MAX_ORDERS)*(axisY()-CURVE_TOP);
+  }
+
+  // Playhead state — loops 0..1 across ~18s
+  let playStart = performance.now();
+  const PLAY_DUR = 18000;
+
+  // Track fired events
+  const evtEls = [...document.querySelectorAll('.tl-evt')];
+  const evtFired = new WeakSet();
+  let lastPlayT = 0;
+
+  // Dom refs
+  const playhead = document.getElementById('tlPlayhead');
+  const readDay = document.getElementById('tlDay');
+  const readOrd = document.getElementById('tlOrd');
+  const readCum = document.getElementById('tlCum');
+  const readPh  = document.getElementById('tlPh');
+
+  function setPhase(di){
+    let name = 'PRE-LAUNCH';
+    if(di>=20) name='CLOSE';
+    else if(di>=13) name='BUDGET SCALED';
+    else if(di>=6) name='META LIVE';
+    else if(di>=0) name='EMAIL LAUNCH';
+    readPh.textContent = name;
+    // highlight active phase band
+    document.querySelectorAll('.tl-phase').forEach(el=>{
+      el.classList.toggle('active', el.dataset.phase.startsWith(name.split(' ')[0]));
+    });
+  }
+
+  // Ambient particle spawner
+  let spawnAccum = 0;
+
+  // Check if animations are enabled at all
+  const enabled = document.documentElement.classList.contains('anim-ready');
+
+  function draw(now){
+    if(!enabled){ requestAnimationFrame(draw); return; }
+    const t = ((now - playStart) % PLAY_DUR) / PLAY_DUR; // 0..1
+    if(t < lastPlayT){ // looped — reset fired events
+      evtEls.forEach(e=>{ e.classList.remove('fired'); });
+      // clear WeakSet by re-creating via a hack: we'll just re-check fresh each loop using a dataset flag
+      evtEls.forEach(e=>e.dataset.fired='0');
+    }
+    lastPlayT = t;
+
+    // Playhead x
+    const px = t*W;
+    playhead.style.left = px + 'px';
+
+    // Readout
+    const dayIdx = Math.min(DAYS-1, Math.floor(t*(DAYS-1) + 0.001));
+    const ord = Math.round(orderAt(t));
+    const cum = Math.round(cumAt(t));
+    readDay.textContent = 'Day ' + String(dayIdx+1).padStart(2,'0') + ' · ' + fullLabels[dayIdx];
+    readOrd.textContent = ord;
+    readCum.textContent = cum;
+    setPhase(dayIdx);
+
+    // Fire events as playhead passes
+    evtEls.forEach(e=>{
+      const d = parseInt(e.dataset.day,10);
+      const et = d/(DAYS-1);
+      if(t >= et && e.dataset.fired !== '1'){
+        e.classList.add('fired'); e.dataset.fired='1';
+        setTimeout(()=>e.classList.remove('fired'), 1200);
+      }
+    });
+
+    // ——— CANVAS DRAW ———
+    ctx.clearRect(0,0,W,H);
+
+    // 1. Base grid glow that pulses with cumulative
+    const glowStrength = 0.2 + 0.5*(orderAt(t)/MAX_ORDERS);
+    const grad = ctx.createLinearGradient(0, axisY()-140, 0, axisY());
+    grad.addColorStop(0, `oklch(0.78 0.11 75 / ${0.02*glowStrength})`);
+    grad.addColorStop(1, `oklch(0.78 0.11 75 / ${0.18*glowStrength})`);
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, axisY()-140, W, 140);
+
+    // 2. Order curve (filled area up to playhead)
+    ctx.beginPath();
+    ctx.moveTo(0, axisY());
+    for(let x=0;x<=W;x+=4){
+      const tx = x/W;
+      ctx.lineTo(x, curveY(tx));
+    }
+    ctx.lineTo(W, axisY()); ctx.closePath();
+    const fgrad = ctx.createLinearGradient(0,0,0,axisY());
+    fgrad.addColorStop(0,'oklch(0.78 0.11 75 / 0.05)');
+    fgrad.addColorStop(1,'oklch(0.78 0.11 75 / 0)');
+    ctx.fillStyle = fgrad; ctx.fill();
+
+    // revealed (below playhead) — brighter
+    ctx.save();
+    ctx.beginPath(); ctx.rect(0,0,px,H); ctx.clip();
+    ctx.beginPath(); ctx.moveTo(0, axisY());
+    for(let x=0;x<=W;x+=2){ ctx.lineTo(x, curveY(x/W)); }
+    ctx.lineTo(W, axisY()); ctx.closePath();
+    const rgrad = ctx.createLinearGradient(0,0,0,axisY());
+    rgrad.addColorStop(0,'oklch(0.86 0.09 85 / 0.35)');
+    rgrad.addColorStop(1,'oklch(0.78 0.11 75 / 0.04)');
+    ctx.fillStyle = rgrad; ctx.fill();
+    ctx.restore();
+
+    // 3. Curve stroke
+    ctx.beginPath();
+    for(let x=0;x<=W;x+=2){
+      const y = curveY(x/W);
+      if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+    }
+    ctx.strokeStyle = 'oklch(0.78 0.11 75 / 0.45)';
+    ctx.lineWidth = 1.2;
+    ctx.stroke();
+
+    // revealed stroke brighter
+    ctx.save();
+    ctx.beginPath(); ctx.rect(0,0,px,H); ctx.clip();
+    ctx.beginPath();
+    for(let x=0;x<=W;x+=2){
+      const y = curveY(x/W);
+      if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+    }
+    ctx.strokeStyle = 'oklch(0.92 0.09 85 / 0.95)';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'oklch(0.86 0.09 85 / 0.8)';
+    ctx.shadowBlur = 12;
+    ctx.stroke();
+    ctx.restore();
+
+    // 4. Particles — spawn from playhead, flow along curve forward/backward
+    spawnAccum += 16;
+    if(spawnAccum>60){ spawnAccum=0; for(let k=0;k<3;k++) spawnParticle(); }
+    for(let i=particles.length-1;i>=0;i--){
+      const p = particles[i];
+      p.life += 0.016;
+      p.t += (p.speed*0.016);
+      if(p.life>p.max || p.t>1){ particles.splice(i,1); continue; }
+      const x = p.t*W;
+      const y = curveY(p.t) + p.offset*(1-p.life/p.max);
+      const a = (1-p.life/p.max) * 0.9;
+      ctx.beginPath();
+      ctx.arc(x, y, p.size, 0, Math.PI*2);
+      ctx.fillStyle = p.hue==='bright'
+        ? `oklch(0.96 0.06 90 / ${a})`
+        : `oklch(0.78 0.11 75 / ${a*0.8})`;
+      ctx.shadowColor = 'oklch(0.86 0.09 85 / 0.8)';
+      ctx.shadowBlur = p.size*4;
+      ctx.fill();
+    }
+    ctx.shadowBlur = 0;
+
+    // 5. Burst rays at playhead
+    const rayY = curveY(t);
+    const intensity = 0.4 + 0.6*(orderAt(t)/MAX_ORDERS);
+    ctx.save();
+    ctx.translate(px, rayY);
+    const rays = 8;
+    for(let k=0;k<rays;k++){
+      const ang = (k/rays)*Math.PI*2 + now*0.0003;
+      const len = 20 + 40*intensity + Math.sin(now*0.003 + k)*8;
+      ctx.beginPath();
+      ctx.moveTo(0,0);
+      ctx.lineTo(Math.cos(ang)*len, Math.sin(ang)*len);
+      ctx.strokeStyle = `oklch(0.86 0.09 85 / ${0.15*intensity})`;
+      ctx.lineWidth = 0.8;
+      ctx.stroke();
+    }
+    // core halo
+    const haloGrad = ctx.createRadialGradient(0,0,0, 0,0, 50*intensity);
+    haloGrad.addColorStop(0,`oklch(0.96 0.06 90 / ${0.8*intensity})`);
+    haloGrad.addColorStop(1,'oklch(0.86 0.09 85 / 0)');
+    ctx.fillStyle = haloGrad;
+    ctx.beginPath(); ctx.arc(0,0,50*intensity,0,Math.PI*2); ctx.fill();
+    ctx.restore();
+
+    // 6. Trail streaks behind playhead
+    for(let k=1;k<=12;k++){
+      const tt = Math.max(0, t - k*0.008);
+      const xx = tt*W;
+      const yy = curveY(tt);
+      ctx.beginPath();
+      ctx.arc(xx, yy, 2.2-k*0.12, 0, Math.PI*2);
+      ctx.fillStyle = `oklch(0.86 0.09 85 / ${(1-k/12)*0.35})`;
+      ctx.fill();
+    }
+
+    // 7. Vertical spark column at playhead (cumulative "thermometer")
+    const barH = (cumAt(t)/150)*(axisY()-30);
+    ctx.fillStyle = 'oklch(0.86 0.09 85 / 0.12)';
+    ctx.fillRect(px-2, axisY()-barH, 4, barH);
+
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+
+// ——— Geo: radar pings, wire packets, coordinate telemetry ———
+(function initGeo(){
+  const stage = document.getElementById('geoStage');
+  const canvas = document.getElementById('geoCanvas');
+  if(!stage || !canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  // Add radial dial ticks around GA (in SVG)
+  const dial = document.querySelector('.geo-dial');
+  if(dial){
+    const cx=420, cy=490;
+    const inner=320, outer=334;
+    for(let i=0;i<48;i++){
+      const a = (i/48)*Math.PI*2 - Math.PI/2;
+      const i2 = i%4===0 ? inner-10 : inner;
+      const x1 = cx + Math.cos(a)*i2, y1 = cy + Math.sin(a)*i2;
+      const x2 = cx + Math.cos(a)*outer, y2 = cy + Math.sin(a)*outer;
+      const ln = document.createElementNS('http://www.w3.org/2000/svg','line');
+      ln.setAttribute('x1',x1.toFixed(1)); ln.setAttribute('y1',y1.toFixed(1));
+      ln.setAttribute('x2',x2.toFixed(1)); ln.setAttribute('y2',y2.toFixed(1));
+      ln.setAttribute('stroke-opacity', i%4===0 ? '0.6' : '0.25');
+      dial.appendChild(ln);
+    }
+    // cardinal labels
+    ['N','E','S','W'].forEach((L,k)=>{
+      const a = (k/4)*Math.PI*2 - Math.PI/2;
+      const x = cx + Math.cos(a)*352, y = cy + Math.sin(a)*352 + 3;
+      const t = document.createElementNS('http://www.w3.org/2000/svg','text');
+      t.setAttribute('x', x.toFixed(1)); t.setAttribute('y', y.toFixed(1));
+      t.setAttribute('text-anchor','middle');
+      t.setAttribute('fill','oklch(0.86 0.09 85 / 0.5)');
+      t.setAttribute('font-size','10'); t.setAttribute('letter-spacing','1.2');
+      t.textContent = L;
+      dial.appendChild(t);
+    });
+  }
+
+  // Canvas sizing — uses viewBox 1200x760 as logical space
+  let W=0,H=0,DPR=Math.min(window.devicePixelRatio||1, 2);
+  const LW=1200, LH=760;
+  let scale=1, ox=0, oy=0; // letterbox fit matching SVG xMidYMid meet
+  function resize(){
+    const r = canvas.getBoundingClientRect();
+    W=r.width; H=r.height;
+    canvas.width = W*DPR; canvas.height=H*DPR;
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    scale = Math.min(W/LW, H/LH);
+    ox = (W - LW*scale)/2;
+    oy = (H - LH*scale)/2;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Map logical (viewBox) coords to canvas — matches SVG xMidYMid meet fit
+  function mx(lx){ return ox + lx*scale; }
+  function my(ly){ return oy + ly*scale; }
+  function ms(lv){ return lv*scale; }
+
+  // State positions in logical coords (updated to match new viewBox 1200x760)
+  const states = [
+    {code:'GA', x:420, y:490, orders:51, tier:'home'},
+    {code:'TN', x:380, y:410, orders:20, tier:'hi'},
+    {code:'NC', x:470, y:400, orders:8, tier:'md'},
+    {code:'SC', x:455, y:470, orders:6, tier:'md'},
+    {code:'TX', x:290, y:532, orders:7, tier:'md'},
+    {code:'MD', x:510, y:370, orders:6, tier:'md'},
+    {code:'PA', x:485, y:318, orders:5, tier:'lo'},
+    {code:'OH', x:432, y:340, orders:5, tier:'lo'},
+    {code:'FL', x:464, y:590, orders:5, tier:'lo'},
+    {code:'MS', x:360, y:496, orders:4, tier:'lo'},
+  ];
+
+  // Ping pulses emanating from each state
+  const pings = [];
+  function spawnPingsFor(s){
+    pings.push({
+      x:s.x, y:s.y,
+      age:0,
+      max: 2.4 + Math.random()*1.2,
+      r0: 0,
+      r1: 18 + Math.sqrt(s.orders)*10,
+      intensity: s.tier==='home' ? 1.2 : (s.tier==='hi' ? 0.9 : 0.55),
+      tier: s.tier,
+    });
+  }
+
+  // Readout rows — each carries target orders + progress + endpoint of its bar
+  const readout = document.getElementById('geoReadout');
+  const rows = {};
+  if(readout){
+    readout.querySelectorAll('.ro-row[data-st]').forEach(r=>{
+      rows[r.dataset.st] = {
+        el:r,
+        target: +r.dataset.orders,
+        maxPct: +r.dataset.max,
+        progress: 0,
+        bar: r.querySelector('.bar i'),
+        cnt: r.querySelector('.cnt'),
+      };
+    });
+  }
+
+  // Compute readout-row bar endpoint in LOGICAL viewBox coords
+  function rowEndpoint(st){
+    const row = rows[st]; if(!row) return null;
+    const bar = row.el.querySelector('.bar');
+    if(!bar) return null;
+    const stageR = stage.getBoundingClientRect();
+    const barR = bar.getBoundingClientRect();
+    // Aim packet at the current END of the filled bar (its right edge accounting for fill)
+    const fill = +(row.bar.style.width || '0').replace('%','');
+    const fillPx = (fill/100) * barR.width;
+    const px = (barR.left - stageR.left) + fillPx;
+    const py = (barR.top - stageR.top) + barR.height/2;
+    // Convert canvas-px → logical coords
+    return { x: (px - ox)/scale, y: (py - oy)/scale, stateCode: st };
+  }
+
+  // Traveling packets: GA state point → target row bar tip
+  const packets = [];
+  function spawnPacketTo(stCode){
+    const from = states[0];
+    const end = rowEndpoint(stCode);
+    if(!end) return;
+    // Bend point so line feels routed (along leader): horizontal from state → right margin then into row
+    const bend = { x: end.x - 40, y: from.y + (end.y - from.y)*0.25 };
+    packets.push({
+      p0:{x:from.x, y:from.y},
+      p1:bend,
+      p2:{x:end.x, y:end.y},
+      stCode,
+      t: 0,
+      speed: 0.55 + Math.random()*0.25,
+      trail: [],
+    });
+  }
+
+  // Scheduling / loop state
+  let pingT=0, packetT=0, cycleDoneT=0;
+  function allFilled(){
+    return Object.values(rows).every(r => r.progress >= r.target);
+  }
+  function resetCycle(){
+    Object.values(rows).forEach(r=>{
+      r.progress = 0;
+      if(r.bar) r.bar.style.width = '0%';
+      if(r.cnt) r.cnt.textContent = '0';
+    });
+  }
+  function pickNextState(){
+    // Weighted by remaining orders, favors higher-volume states
+    const pool = Object.values(rows).filter(r => r.progress < r.target);
+    if(!pool.length) return null;
+    let total = 0; pool.forEach(r => total += (r.target - r.progress));
+    let pick = Math.random()*total;
+    for(const r of pool){
+      pick -= (r.target - r.progress);
+      if(pick <= 0) return r.el.dataset.st;
+    }
+    return pool[0].el.dataset.st;
+  }
+  function onPacketArrive(stCode){
+    const r = rows[stCode]; if(!r) return;
+    r.progress = Math.min(r.target, r.progress + 1);
+    if(r.cnt) r.cnt.textContent = String(r.progress);
+    if(r.bar) r.bar.style.width = ((r.progress/r.target) * r.maxPct) + '%';
+    r.el.classList.remove('pulse'); void r.el.offsetWidth; r.el.classList.add('pulse');
+  }
+
+  // Telemetry updaters
+  const coordEl = document.getElementById('geoCoord');
+  const scanEl = document.getElementById('geoScan');
+
+  function draw(now){
+    const dt = 1/60;
+    ctx.clearRect(0,0,W,H);
+
+    // Subtle parallax noise (sparse dots)
+    if(Math.random()<0.6){
+      for(let k=0;k<4;k++){
+        const rx=Math.random()*W, ry=Math.random()*H;
+        ctx.fillStyle = `oklch(0.86 0.09 85 / ${Math.random()*0.07})`;
+        ctx.fillRect(rx, ry, 1, 1);
+      }
+    }
+
+    // (aurora removed per request)
+
+    // Schedule pings
+    pingT += dt;
+    if(pingT > 0.55){
+      pingT = 0;
+      // GA always pings; others with probability weighted by orders
+      spawnPingsFor(states[0]);
+      states.slice(1).forEach(s=>{
+        if(Math.random() < s.orders/60) spawnPingsFor(s);
+      });
+    }
+
+    // Schedule packets from GA -> row endpoint (order-flow loop)
+    if(allFilled()){
+      cycleDoneT += dt;
+      if(cycleDoneT > 2.2){ cycleDoneT = 0; resetCycle(); }
+    } else {
+      packetT += dt;
+      if(packetT > 0.18){
+        packetT = 0;
+        const st = pickNextState();
+        if(st) spawnPacketTo(st);
+      }
+    }
+
+    // Draw pings
+    for(let i=pings.length-1;i>=0;i--){
+      const p = pings[i];
+      p.age += dt;
+      if(p.age > p.max){ pings.splice(i,1); continue; }
+      const k = p.age/p.max;
+      const r = p.r0 + (p.r1-p.r0)*k;
+      const alpha = (1-k) * 0.9 * p.intensity;
+      ctx.beginPath();
+      ctx.arc(mx(p.x), my(p.y), ms(r), 0, Math.PI*2);
+      ctx.strokeStyle = p.tier==='home'
+        ? `oklch(0.92 0.09 85 / ${alpha})`
+        : `oklch(0.82 0.09 80 / ${alpha*0.75})`;
+      ctx.lineWidth = 1 + (1-k)*1.5;
+      ctx.stroke();
+      // inner filled disc fading
+      ctx.beginPath();
+      ctx.arc(mx(p.x), my(p.y), ms(r)*0.35, 0, Math.PI*2);
+      ctx.fillStyle = p.tier==='home'
+        ? `oklch(0.92 0.09 85 / ${alpha*0.08})`
+        : `oklch(0.82 0.09 80 / ${alpha*0.05})`;
+      ctx.fill();
+    }
+
+    // Draw packets (quadratic bezier GA → bend → row-bar tip)
+    for(let i=packets.length-1;i>=0;i--){
+      const p = packets[i];
+      p.t += p.speed * dt;
+      if(p.t >= 1){
+        onPacketArrive(p.stCode);
+        packets.splice(i,1);
+        continue;
+      }
+      const t = p.t, u = 1 - t;
+      const x = u*u*p.p0.x + 2*u*t*p.p1.x + t*t*p.p2.x;
+      const y = u*u*p.p0.y + 2*u*t*p.p1.y + t*t*p.p2.y;
+      // trail
+      p.trail.unshift([x,y]);
+      if(p.trail.length>14) p.trail.pop();
+      // draw trail as fading line
+      ctx.beginPath();
+      p.trail.forEach((pt,k)=>{
+        const mxp = mx(pt[0]), myp = my(pt[1]);
+        if(k===0) ctx.moveTo(mxp, myp); else ctx.lineTo(mxp, myp);
+      });
+      ctx.strokeStyle = 'oklch(0.92 0.09 85 / 0.35)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      // head
+      ctx.beginPath();
+      ctx.arc(mx(x), my(y), 2.8, 0, Math.PI*2);
+      ctx.fillStyle = 'oklch(0.98 0.06 90 / 0.98)';
+      ctx.shadowColor = 'oklch(0.86 0.09 85 / 0.9)';
+      ctx.shadowBlur = 12;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    // Highlight GA permanent core ping
+    const corePulse = 0.65 + 0.35*Math.sin(now*0.002);
+    ctx.beginPath();
+    ctx.arc(mx(420), my(245), ms(10)*corePulse, 0, Math.PI*2);
+    ctx.fillStyle = `oklch(0.92 0.09 85 / ${0.22*corePulse})`;
+    ctx.fill();
+
+    // Coord telemetry drift
+    if(coordEl && Math.floor(now/200) !== (coordEl.dataset.last|0)){
+      coordEl.dataset.last = Math.floor(now/200);
+      const lat = (32.1656 + Math.sin(now*0.0003)*0.12).toFixed(4);
+      const lon = (-82.9001 + Math.cos(now*0.00025)*0.14).toFixed(4);
+      coordEl.textContent = `LAT ${lat} · LON ${lon}`;
+    }
+    if(scanEl){
+      const deg = Math.floor(((now*0.065) % 360));
+      scanEl.textContent = 'SCAN ' + String(deg).padStart(3,'0') + '°';
+    }
+
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+
+// ——— Products: Ascension Bloom (radial, generative) ———
+(function initProducts(){
+  const stage = document.getElementById('prodStage');
+  const bloom = document.getElementById('prodBloom');
+  const canvas = document.getElementById('prodCanvas');
+  const svg = document.getElementById('prodSvg');
+  if(!stage || !bloom || !canvas || !svg) return;
+  const ctx = canvas.getContext('2d');
+
+  const LW=900, LH=700, CX=450, CY=340;
+  let W=0,H=0,DPR=Math.min(window.devicePixelRatio||1, 2);
+  let scale=1, ox=0, oy=0;
+  function resize(){
+    const r = canvas.getBoundingClientRect();
+    W=r.width; H=r.height;
+    canvas.width = W*DPR; canvas.height=H*DPR;
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    scale = Math.min(W/LW, H/LH);
+    ox = (W - LW*scale)/2;
+    oy = (H - LH*scale)/2;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  const mx=x=>ox+x*scale, my=y=>oy+y*scale, ms=v=>v*scale;
+
+  const TAU = Math.PI*2;
+  const products = [
+    {code:'AZL-WHT', name:'Azalea White',         units:64, pct:59, r: 265, w:22, color:'accent-bright', a0:-Math.PI*0.88, a1:Math.PI*0.22, hero:true},
+    {code:'PCH-SKY', name:'Peach Sky',            units:33, pct:30, r: 220, w:12, color:'accent',        a0:Math.PI*0.34, a1:Math.PI*0.94},
+    {code:'PCH-CAM', name:'Peach Camo',           units:10, pct:9,  r: 190, w:9,  color:'warm',          a0:Math.PI*1.04, a1:Math.PI*1.22},
+    {code:'PCH-RPE', name:'Peach Rope',           units:9,  pct:8,  r: 165, w:9,  color:'warm',          a0:Math.PI*1.28, a1:Math.PI*1.44},
+    {code:'OUT-WCM', name:'Outline · warm camo',  units:7,  pct:6,  r: 140, w:8,  color:'warm',          a0:Math.PI*1.50, a1:Math.PI*1.62},
+    {code:'OUT-WSL', name:'Outline · warm slate', units:7,  pct:6,  r: 115, w:8,  color:'warm',          a0:Math.PI*1.68, a1:Math.PI*1.80},
+    {code:'AZL-WSL', name:'Azalea · warm slate',  units:5,  pct:5,  r: 95,  w:7,  color:'dim',           a0:Math.PI*1.86, a1:Math.PI*1.94},
+    {code:'AZL-CAM', name:'Azalea Camo',          units:5,  pct:5,  r: 78,  w:7,  color:'dim',           a0:Math.PI*0.04, a1:Math.PI*0.12},
+    {code:'AZL-TEE', name:'Azalea Tee',           units:1,  pct:1,  r: 55,  w:6,  color:'dim',           a0:Math.PI*0.18, a1:Math.PI*0.21},
+  ];
+  products.forEach(p=> p.fill = 0);
+
+  function colorFor(p, alpha=1){
+    if(p.color==='accent-bright') return `oklch(0.94 0.10 85 / ${alpha})`;
+    if(p.color==='accent')        return `oklch(0.84 0.10 80 / ${alpha})`;
+    if(p.color==='warm')          return `oklch(0.72 0.08 75 / ${alpha})`;
+    return `oklch(0.62 0.05 75 / ${alpha})`;
+  }
+  function strokeFor(p, alpha=0.6){
+    if(p.color==='accent-bright') return `oklch(0.98 0.07 88 / ${alpha})`;
+    if(p.color==='accent')        return `oklch(0.92 0.09 82 / ${alpha})`;
+    if(p.color==='warm')          return `oklch(0.82 0.08 78 / ${alpha})`;
+    return `oklch(0.72 0.05 75 / ${alpha})`;
+  }
+
+  (function buildSvg(){
+    const NS = 'http://www.w3.org/2000/svg';
+    for(let r=60;r<=290;r+=30){
+      const c = document.createElementNS(NS,'circle');
+      c.setAttribute('cx',CX); c.setAttribute('cy',CY); c.setAttribute('r', r);
+      c.setAttribute('fill','none');
+      c.setAttribute('stroke', r===270 ? 'rgba(212,175,110,0.22)' : 'rgba(212,175,110,0.06)');
+      c.setAttribute('stroke-width', r===270 ? '0.8' : '0.4');
+      if(r===270) c.setAttribute('stroke-dasharray','2 4');
+      svg.appendChild(c);
+    }
+    for(let i=0;i<72;i++){
+      const a = (i/72)*TAU - Math.PI/2;
+      const inner = i%9===0 ? 300 : (i%3===0 ? 295 : 292);
+      const outer = 308;
+      const x1 = CX + Math.cos(a)*inner, y1 = CY + Math.sin(a)*inner;
+      const x2 = CX + Math.cos(a)*outer, y2 = CY + Math.sin(a)*outer;
+      const ln = document.createElementNS(NS,'line');
+      ln.setAttribute('x1',x1.toFixed(1)); ln.setAttribute('y1',y1.toFixed(1));
+      ln.setAttribute('x2',x2.toFixed(1)); ln.setAttribute('y2',y2.toFixed(1));
+      ln.setAttribute('stroke','oklch(0.86 0.09 85)');
+      ln.setAttribute('stroke-width', i%9===0 ? '1' : '0.5');
+      ln.setAttribute('stroke-opacity', i%9===0 ? '0.55' : '0.2');
+      svg.appendChild(ln);
+    }
+    [0,90,180,270].forEach((deg)=>{
+      const a = (deg/360)*TAU - Math.PI/2;
+      const x = CX + Math.cos(a)*322, y = CY + Math.sin(a)*322 + 3;
+      const t = document.createElementNS(NS,'text');
+      t.setAttribute('x',x.toFixed(1)); t.setAttribute('y',y.toFixed(1));
+      t.setAttribute('text-anchor','middle');
+      t.setAttribute('fill','oklch(0.86 0.09 85 / 0.55)');
+      t.setAttribute('font-size','9'); t.setAttribute('letter-spacing','1.5');
+      t.textContent = String(deg).padStart(3,'0')+'°';
+      svg.appendChild(t);
+    });
+    [[60,60,1,1],[840,60,-1,1],[60,640,1,-1],[840,640,-1,-1]].forEach(([x,y,dx,dy])=>{
+      const p = document.createElementNS(NS,'path');
+      p.setAttribute('d', `M ${x} ${y+dy*16} L ${x} ${y} L ${x+dx*16} ${y}`);
+      p.setAttribute('stroke','oklch(0.86 0.09 85 / 0.5)');
+      p.setAttribute('stroke-width','0.8');
+      p.setAttribute('fill','none');
+      svg.appendChild(p);
+    });
+  })();
+
+  const particles = [];
+  function spawnParticle(prod){
+    const a = prod.a0 + Math.random()*(prod.a1 - prod.a0);
+    particles.push({ prod, a, r: 30 + Math.random()*8, vr: 40 + Math.random()*90, rTarget: prod.r, life: 0, maxLife: (prod.r-30)/90 + 0.6, spin: (Math.random()-0.5)*0.3 });
+  }
+  const orbiters = [];
+  function spawnOrbiter(){
+    orbiters.push({ r: 270 + Math.random()*10, a: Math.random()*TAU, av: 0.12 + Math.random()*0.08, alpha: 0.6 + Math.random()*0.3, size: 1.2 + Math.random()*0.8, life: 0, maxLife: 6 + Math.random()*5 });
+  }
+
+  const coreNumEl = document.querySelector('#prodCore .c2');
+
+  let particleT = 0, orbiterT = 0, cycleDone = 0;
+  function allFull(){ return products.every(p => p.fill >= 1); }
+  function resetCycle(){ products.forEach(p => p.fill = 0); }
+
+  // Labels
+  const labels = [];
+  products.forEach(p => {
+    const el = document.createElement('div');
+    el.className = 'sku-node' + (p.hero ? ' big' : (p.color==='dim' ? ' dim' : ''));
+    const am = (p.a0 + p.a1)/2;
+    el.innerHTML = `<div class="nm">${p.name}</div><div class="pct">${p.pct}% · <span class="u">${p.units}u</span></div>`;
+    bloom.appendChild(el);
+    labels.push({p, el, am, labelR: p.r + 32});
+  });
+  function placeLabels(){
+    const br = bloom.getBoundingClientRect();
+    const s = Math.min(br.width/LW, br.height/LH);
+    const cx = br.width/2, cy = br.height/2;
+    labels.forEach(({p, el, am, labelR})=>{
+      const x = cx + Math.cos(am) * labelR * s;
+      const y = cy + Math.sin(am) * labelR * s;
+      el.style.left = x + 'px';
+      el.style.top = y + 'px';
+      if(Math.cos(am) >= 0){ el.style.transform = 'translate(0, -50%)'; el.classList.remove('right'); }
+      else { el.style.transform = 'translate(-100%, -50%)'; el.classList.add('right'); }
+    });
+  }
+  placeLabels();
+  window.addEventListener('resize', placeLabels);
+
+  let coreNumDisplay = 0;
+
+  function draw(now){
+    const dt = 1/60;
+    ctx.clearRect(0,0,W,H);
+
+    // Breathing core bg
+    const grd = ctx.createRadialGradient(mx(CX), my(CY), 0, mx(CX), my(CY), ms(320));
+    const breathe = 0.55 + 0.15*Math.sin(now*0.0009);
+    grd.addColorStop(0, `oklch(0.86 0.09 85 / ${0.10*breathe})`);
+    grd.addColorStop(0.4, `oklch(0.78 0.11 75 / ${0.04*breathe})`);
+    grd.addColorStop(1, 'oklch(0.78 0.11 75 / 0)');
+    ctx.fillStyle = grd; ctx.fillRect(0,0,W,H);
+
+    // Sweep line
+    const sweepA = (now*0.00035) % TAU;
+    ctx.save();
+    ctx.translate(mx(CX), my(CY));
+    ctx.rotate(sweepA);
+    const sweepGrad = ctx.createLinearGradient(0,0, ms(300),0);
+    sweepGrad.addColorStop(0,'oklch(0.92 0.09 85 / 0.0)');
+    sweepGrad.addColorStop(0.85,'oklch(0.92 0.09 85 / 0.18)');
+    sweepGrad.addColorStop(1,'oklch(0.98 0.08 88 / 0.5)');
+    ctx.strokeStyle = sweepGrad; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(ms(300),0); ctx.stroke();
+    ctx.restore();
+
+    // Advance fills
+    if(allFull()){
+      cycleDone += dt;
+      if(cycleDone > 2.5){ cycleDone = 0; resetCycle(); }
+    } else {
+      products.forEach(p => {
+        if(p.fill < 1){
+          const speed = p.hero ? 0.22 : 0.38;
+          p.fill = Math.min(1, p.fill + speed*dt);
+        }
+      });
+    }
+
+    // Arcs
+    products.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(mx(CX), my(CY), ms(p.r), p.a0, p.a1);
+      ctx.strokeStyle = 'oklch(0.86 0.09 85 / 0.08)';
+      ctx.lineWidth = ms(p.w);
+      ctx.lineCap = 'butt';
+      ctx.stroke();
+
+      const aFill = p.a0 + (p.a1 - p.a0) * p.fill;
+      if(aFill > p.a0 + 0.0005){
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(mx(CX), my(CY), ms(p.r), p.a0, aFill);
+        ctx.lineWidth = ms(p.w); ctx.lineCap = 'round';
+        ctx.shadowColor = strokeFor(p, 0.6);
+        ctx.shadowBlur = p.hero ? 16 : 8;
+        ctx.strokeStyle = colorFor(p, p.hero ? 0.95 : 0.85);
+        ctx.stroke();
+        ctx.restore();
+
+        // bright leading streak
+        if(aFill > p.a0 + 0.03){
+          ctx.beginPath();
+          ctx.arc(mx(CX), my(CY), ms(p.r), Math.max(p.a0, aFill-0.05), aFill);
+          ctx.strokeStyle = strokeFor(p, 1);
+          ctx.lineWidth = ms(p.w*0.7);
+          ctx.lineCap = 'round';
+          ctx.stroke();
+        }
+
+        const tipX = CX + Math.cos(aFill) * p.r;
+        const tipY = CY + Math.sin(aFill) * p.r;
+        ctx.beginPath();
+        ctx.arc(mx(tipX), my(tipY), ms(p.hero ? 4 : 2.5), 0, TAU);
+        ctx.fillStyle = 'oklch(0.98 0.06 90 / 0.95)';
+        ctx.shadowColor = strokeFor(p, 1);
+        ctx.shadowBlur = p.hero ? 20 : 10;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+
+      if(p.fill > 0.02){
+        const sX = CX + Math.cos(p.a0) * p.r;
+        const sY = CY + Math.sin(p.a0) * p.r;
+        ctx.save();
+        ctx.translate(mx(sX), my(sY));
+        ctx.rotate(Math.PI/4);
+        ctx.fillStyle = strokeFor(p, 0.9);
+        const sz = ms(p.hero ? 4 : 2.5);
+        ctx.fillRect(-sz/2, -sz/2, sz, sz);
+        ctx.restore();
+      }
+    });
+
+    // Radial spokes (wires)
+    products.forEach(p => {
+      if(p.fill < 0.02) return;
+      const am = p.a0 + (p.a1 - p.a0) * p.fill * 0.5;
+      const innerR = 34;
+      const outerR = p.r * (0.2 + 0.8 * p.fill);
+      const x1 = CX + Math.cos(am)*innerR, y1 = CY + Math.sin(am)*innerR;
+      const x2 = CX + Math.cos(am)*outerR, y2 = CY + Math.sin(am)*outerR;
+      const g = ctx.createLinearGradient(mx(x1),my(y1),mx(x2),my(y2));
+      g.addColorStop(0, strokeFor(p, 0));
+      g.addColorStop(1, strokeFor(p, p.hero ? 0.5 : 0.3));
+      ctx.beginPath();
+      ctx.moveTo(mx(x1), my(y1));
+      ctx.lineTo(mx(x2), my(y2));
+      ctx.strokeStyle = g; ctx.lineWidth = 0.8;
+      ctx.stroke();
+    });
+
+    // Particles
+    particleT += dt;
+    if(particleT > 0.045){
+      particleT = 0;
+      let total = 0; products.forEach(p => { if(p.fill<1) total += p.units });
+      if(total>0){
+        let pick = Math.random()*total;
+        for(const p of products){
+          if(p.fill>=1) continue;
+          pick -= p.units;
+          if(pick<=0){ spawnParticle(p); break; }
+        }
+      }
+    }
+    for(let i=particles.length-1;i>=0;i--){
+      const pt = particles[i];
+      pt.life += dt;
+      pt.r += pt.vr * dt;
+      pt.a += pt.spin * dt;
+      if(pt.r >= pt.rTarget || pt.life > pt.maxLife){
+        const x = CX + Math.cos(pt.a)*pt.rTarget;
+        const y = CY + Math.sin(pt.a)*pt.rTarget;
+        ctx.beginPath();
+        ctx.arc(mx(x), my(y), ms(3), 0, TAU);
+        ctx.fillStyle = strokeFor(pt.prod, 0.9);
+        ctx.shadowColor = strokeFor(pt.prod, 1);
+        ctx.shadowBlur = 14;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+        particles.splice(i,1);
+        continue;
+      }
+      const x = CX + Math.cos(pt.a)*pt.r;
+      const y = CY + Math.sin(pt.a)*pt.r;
+      const alpha = Math.min(1, pt.life*3);
+      const trailLen = 8;
+      for(let k=0;k<trailLen;k++){
+        const tr = pt.r - k*2.5;
+        if(tr < 20) break;
+        const tx = CX + Math.cos(pt.a)*tr, ty = CY + Math.sin(pt.a)*tr;
+        ctx.beginPath();
+        ctx.arc(mx(tx), my(ty), ms(0.9 + k*0.04), 0, TAU);
+        ctx.fillStyle = strokeFor(pt.prod, alpha * (1 - k/trailLen) * 0.8);
+        ctx.fill();
+      }
+      ctx.beginPath();
+      ctx.arc(mx(x), my(y), ms(1.4), 0, TAU);
+      ctx.fillStyle = `oklch(0.98 0.06 90 / ${alpha})`;
+      ctx.shadowColor = strokeFor(pt.prod, alpha);
+      ctx.shadowBlur = 8;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    // Orbiters
+    orbiterT += dt;
+    if(orbiterT > 0.35 && orbiters.length < 24){ orbiterT = 0; spawnOrbiter(); }
+    for(let i=orbiters.length-1;i>=0;i--){
+      const o = orbiters[i];
+      o.life += dt;
+      o.a += o.av * dt;
+      if(o.life > o.maxLife){ orbiters.splice(i,1); continue; }
+      const k = Math.sin((o.life/o.maxLife)*Math.PI);
+      const x = CX + Math.cos(o.a)*o.r;
+      const y = CY + Math.sin(o.a)*o.r;
+      ctx.beginPath();
+      ctx.arc(mx(x), my(y), ms(o.size), 0, TAU);
+      ctx.fillStyle = `oklch(0.86 0.09 85 / ${o.alpha * k})`;
+      ctx.fill();
+    }
+
+    // Core
+    const corePulse = 0.55 + 0.2*Math.sin(now*0.0025);
+    for(let k=0;k<3;k++){
+      ctx.beginPath();
+      ctx.arc(mx(CX), my(CY), ms(22 + k*6), 0, TAU);
+      ctx.strokeStyle = `oklch(0.92 0.09 85 / ${(0.2 - k*0.06)*corePulse})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+    ctx.beginPath();
+    ctx.arc(mx(CX), my(CY), ms(16), 0, TAU);
+    ctx.fillStyle = 'rgba(0,0,0,0.8)'; ctx.fill();
+    ctx.beginPath();
+    ctx.arc(mx(CX), my(CY), ms(16), 0, TAU);
+    ctx.strokeStyle = 'oklch(0.92 0.09 85 / 0.8)';
+    ctx.lineWidth = 1.2; ctx.stroke();
+
+    // Core number
+    const live = products.reduce((s,p)=> s + p.units * p.fill, 0);
+    coreNumDisplay += (live - coreNumDisplay) * 0.08;
+    if(coreNumEl) coreNumEl.textContent = Math.round(coreNumDisplay);
+
+    // Clock
+    const clockEl = document.getElementById('prodClock');
+    if(clockEl && Math.floor(now/1000) !== (clockEl.dataset.last|0)){
+      clockEl.dataset.last = Math.floor(now/1000);
+      const s = Math.floor(now/1000);
+      const ss = (22 + s) % 60;
+      const mm = (58 + Math.floor((22+s)/60)) % 60;
+      clockEl.textContent = `T+14:${String(mm).padStart(2,'0')}:${String(ss).padStart(2,'0')}`;
+    }
+
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+</script>
+
+</body>
+</html>
