@@ -1,0 +1,4 @@
+shot-*.jpg
+shot-*.png
+*.log
+.DS_Store
