@@ -299,7 +299,8 @@
   .prod-row.hero::after{content:"";position:absolute;right:32px;top:50%;width:4px;height:4px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 12px var(--accent-glow);transform:translateY(-50%);animation:prFlake 2.4s ease-in-out infinite}
 
   /* ——— PRODUCTS — aggressive entrance animation ——— */
-  .prod-row{opacity:0;transform:translateX(-14px)}
+  /* default to visible; only rewind when animations are ready */
+  html.anim-ready .prod-row{opacity:0;transform:translateX(-14px)}
   .prod-wrap.go .prod-row{animation:prRowIn .7s cubic-bezier(.2,.7,.2,1) both}
   .prod-wrap.go .prod-row:nth-child(3){animation-delay:.05s}
   .prod-wrap.go .prod-row:nth-child(4){animation-delay:.30s}
@@ -3500,6 +3501,33 @@
     requestAnimationFrame(draw);
   }
   requestAnimationFrame(draw);
+})();
+
+// ——— Fallback: ensure product leaderboard is fully painted even when
+//     animations are disabled (reduced-motion, headless capture, etc.) ———
+(function ensureProducts(){
+  const pw = document.getElementById('prodWrap');
+  if(!pw) return;
+  const paintFinal = () => {
+    pw.classList.add('go');
+    pw.querySelectorAll('.prod-row .fill[data-w]').forEach(f => {
+      const w = f.getAttribute('data-w') || '0';
+      if(!f.style.width || f.style.width === '0%') f.style.width = w + '%';
+    });
+    pw.querySelectorAll('.prod-row .un[data-target], .prod-row .pct[data-target]').forEach(el => {
+      const target = parseInt(el.dataset.target, 10);
+      const hasU = el.querySelector('.u');
+      const suffix = el.classList.contains('pct') ? '%' : '';
+      if(hasU){ el.firstChild.nodeValue = target; }
+      else { el.textContent = target + suffix; }
+    });
+  };
+  // Paint final values when animations are disabled OR after a safety timeout.
+  if(!document.documentElement.classList.contains('anim-ready')){
+    paintFinal();
+  } else {
+    setTimeout(() => { if(!pw.classList.contains('go')) paintFinal(); }, 4000);
+  }
 })();
 </script>
 
